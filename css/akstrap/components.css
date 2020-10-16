@@ -1,0 +1,16 @@
+@import "components/scrollbar/scrollbar.css";
+@import "components/sections.css";
+@import "components/buttons.css";
+@import "components/userIn.css";
+@import "components/tables.css";
+@import "components/headers.css";
+@import "components/navbars.css";
+
+
+
+/*IMAGES*/
+.img{
+    border-radius: var(--radius);
+    box-shadow: var(--box_shadow);
+    width: 100%;
+}

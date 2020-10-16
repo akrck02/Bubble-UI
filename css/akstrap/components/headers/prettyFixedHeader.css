@@ -1,0 +1,17 @@
+.prettyFixedHeader{
+    position: fixed;
+    display: block;
+    top:0;
+    left:0;
+    z-index:9;
+    background: var(--bg);
+    height: 40px;
+    width: calc(100% - 30px);
+    background: var(--b2);
+    box-shadow: var(--box_shadow);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin:0;
+    padding: 15px;
+}

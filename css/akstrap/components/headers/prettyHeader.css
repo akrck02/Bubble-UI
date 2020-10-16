@@ -1,0 +1,12 @@
+.prettyHeader{
+    background: var(--bg);
+    height: 20px;
+    width: calc(100% - 50px);
+    background: var(--b2);
+    box-shadow: var(--box_shadow);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin:0;
+    padding: 25px;
+}

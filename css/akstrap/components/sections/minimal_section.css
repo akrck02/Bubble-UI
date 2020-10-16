@@ -1,0 +1,15 @@
+.minimalSection{
+    width: 80%;
+    max-width: 500px;
+    padding: 10px;
+    color: var(--txt_color);
+    display:flex;
+    flex-direction: column;
+}
+
+.minimalSection>img{
+    position: relative;
+    width: 100%;
+    align-self: center;
+    margin: 0;
+}

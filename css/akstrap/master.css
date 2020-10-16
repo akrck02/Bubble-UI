@@ -1,0 +1,54 @@
+
+@import "components.css";
+@import "layouts.css";
+@import "colorSet.css";
+
+/*VARIABLES HTML*/
+html{
+    --bg: #fafafa;
+    --b2: #fff;
+    --font:'Roboto', sans-serif;
+    --txt_color: #404040;
+    --accent_color: dodgerblue;
+    --accent_color_light: #80c0ee;
+    --box_shadow: 0px 2px 4px rgba(0,0,0,.15);
+    --box_shadow_right: 2px 0px 4px rgba(0,0,0,.15);
+    --radius: 3px;
+    --pd_btn: 10px;
+    --pd_in: 5px;
+    --margin: 10px;
+    --outline: .5px solid lightgray;
+    margin: 0;
+    padding: 0;
+}
+
+html[data-theme = "dark"]{
+    --bg: #202020;
+    --b2: #242424;
+    --txt_color: #eaeaea;
+    --box_shadow: 0px 2px 4px rgba(0,0,0,.15);
+    --box_shadow_right: 2px 0px 4px rgba(0,0,0,.15);
+    --outline: .5px solid #161616;
+}
+
+*{   
+    margin: 10px;
+    transition: .25s;
+}
+
+*:focus{outline: var(--outline);}
+
+
+/*ELEMENT OPTIONS*/
+body{
+    background: var(--bg);
+    color: var(--txt_color);
+    font-family: var(--font);
+    margin: 0;
+
+}
+
+div{margin: var(--margin);}
+input[type=checkbox]{margin: 10px;}
+label{cursor: pointer;}
+label:hover{ color: var(--accent_color)}

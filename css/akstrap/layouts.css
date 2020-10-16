@@ -1,0 +1,51 @@
+/*PAGE OPTIONS*/
+.onePage{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.halfPage{
+    width: 50%;
+    height: 50%;
+}
+
+/*ALIGN OPTIONS*/
+.align-horizontal{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*FLEX OPTIONS*/
+.centerFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerFlexHorizontal{
+    display: flex;
+
+    align-items: center;
+}
+
+.leftFlex{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.flexWarp{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flexCollumn{
+    display: flex;
+    flex-direction: column;
+}
+.flexRow{
+    display: flex;
+    flex-direction: row;
+}
+

@@ -1,0 +1,20 @@
+.adaptableSection{
+    width: 80%;
+    max-width: 470px;
+    padding: 15px;
+    background-color: var(--b2);
+    color: var(--txt_color);
+    display:flex;
+    flex-direction: column;
+    box-shadow: var(--box_shadow);
+    border-radius: var(--radius);
+}
+
+.adaptableSection>img{
+    position: relative;
+    width: calc(100% - 20px);
+    align-self: center;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

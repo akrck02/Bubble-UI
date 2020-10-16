@@ -1,0 +1,51 @@
+.prettyNavbar{
+    position: fixed;
+    background: var(--b2);
+    width: 300px;
+    height: calc(100vh - 70px);
+    padding: 50px;
+    z-index: 5;
+    top:70px;
+    left: -500px;
+    margin: 0;
+    box-shadow: var(--box_shadow_right);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    transition: .45s;
+}
+
+.prettyNavbar .prettyNavbarList{
+    position: relative;
+    list-style-type: none;
+    width: calc(80% - 30px);
+    font-size: 1.2em;
+    border-radius: var(--radius);
+}
+
+.prettyNavbar a{
+    position: relative;
+    display: block;
+    padding: 15px;
+    margin:0;
+}
+
+.prettyNavbar .prettyNavbarList:hover{
+    background: var(--bg);
+    transform: translateY(-3px);
+}
+
+.prettyNavbar .prettyNavbarList .prettyNavbarAnchor{
+    display: block;
+    position: relative;
+    color: var(--txt_color);
+    text-decoration: none;
+    width: calc(100% - 20px);
+}
+
+.prettyNavbar .prettyNavbarList.accent{
+    background: var(--accent_color);
+    box-shadow: var(--box_shadow);
+}
+.prettyNavbar .prettyNavbarList.accent .prettyNavbarAnchor{color: var(--bg);}

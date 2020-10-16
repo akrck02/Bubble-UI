@@ -1,0 +1,37 @@
+.prettyTable{
+    padding: 1%;
+    width:90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.prettyTableCollumn{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin: 5px;
+}
+
+.prettyTable .prettyTableHeader, .prettyTable .prettyTableData{
+    box-shadow: var(--box_shadow);
+    padding: 10px;
+    border-radius: var(--radius);
+}
+
+.prettyTable .prettyTableData{
+    background: var(--b2);
+    text-align: center;
+}
+
+.prettyTable .prettyTableHeader{
+    background: var(--txt_color);
+    color: var(--bg);
+    text-align: center;
+}
+
+/*FLEX JS*/
+
