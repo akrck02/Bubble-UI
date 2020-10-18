@@ -1,0 +1,13 @@
+.containerSquare{
+    --cont_square-width: 10vw;
+    position: relative;
+    width: var(--container1_1-width);
+    height: var(--container1_1-width);
+}
+
+.containerSquareMini{
+    --cont_square_mini-width: 5vw;
+    position: relative;
+    width: var(--cont_square_mini-width);
+    height: var(--cont_square_mini-width);
+}

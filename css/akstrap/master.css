@@ -1,7 +1,5 @@
 
-@import "components.css";
-@import "layouts.css";
-@import "colorSet.css";
+@import "modules/akstrap_def/gestor.css";
 
 /*VARIABLES HTML*/
 html{
@@ -9,6 +7,7 @@ html{
     --b2: #fff;
     --font:'Roboto', sans-serif;
     --txt_color: #404040;
+    --error_color: #EB5757;
     --accent_color: dodgerblue;
     --accent_color_light: #80c0ee;
     --box_shadow: 0px 2px 4px rgba(0,0,0,.15);

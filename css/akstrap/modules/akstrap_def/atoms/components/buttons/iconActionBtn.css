@@ -1,0 +1,15 @@
+.iconActionBtn{
+    background: var(--bg);
+    border:none;
+    height: 100%;
+    width: 100%;
+    box-shadow: var(--box_shadow);
+    padding: var(--pd_btn);
+    cursor:pointer;
+    border-radius: 100%;
+}
+
+.iconActionBtn.accent{
+    background: var(--accent_color);
+    color: var(--bg);
+}

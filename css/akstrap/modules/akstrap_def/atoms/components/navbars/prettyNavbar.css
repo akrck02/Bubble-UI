@@ -13,7 +13,7 @@
     flex-direction: column;
     align-items: center;
     overflow: auto;
-    transition: .45s;
+    transition: .5s;
 }
 
 .prettyNavbar .prettyNavbarList{
@@ -49,3 +49,13 @@
     box-shadow: var(--box_shadow);
 }
 .prettyNavbar .prettyNavbarList.accent .prettyNavbarAnchor{color: var(--bg);}
+
+
+@media (max-width: 700px) {
+    .prettyNavbar{
+        width: calc(100% - 100px);
+        height: calc(100vh - 70px);
+        top:70px;
+        left: -100%;
+    }
+  }
