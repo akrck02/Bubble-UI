@@ -6,7 +6,7 @@
 }
 
 .containerSquareMini{
-    --cont_square_mini-width: 5vw;
+    --cont_square_mini-width: 3vw;
     position: relative;
     width: var(--cont_square_mini-width);
     height: var(--cont_square_mini-width);

@@ -15,7 +15,9 @@
     overflow: auto;
     transition: .5s;
 }
-
+.prettyNavbar .prettyNavbarList{
+    margin: 10px;
+}
 .prettyNavbar .prettyNavbarList{
     position: relative;
     list-style-type: none;
@@ -41,7 +43,7 @@
     position: relative;
     color: var(--txt_color);
     text-decoration: none;
-    width: calc(100% - 20px);
+    width: calc(100% - 30px);
 }
 
 .prettyNavbar .prettyNavbarList.accent{

@@ -7,7 +7,7 @@
     justify-content: center;
 }
 
-.prettyTableCollumn{
+.prettyTableColumn{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
