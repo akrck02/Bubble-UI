@@ -1,0 +1,6 @@
+.defBtnClick:hover{transform: scale(.9);}
+.minimalBtnAccent:hover{
+    transform: none;
+    color: var(--txt_color);
+    background: var(--bg);
+}

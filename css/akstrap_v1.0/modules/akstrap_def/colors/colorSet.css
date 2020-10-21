@@ -1,0 +1,3 @@
+@import "accents.css";
+
+.textColor{color:var(--txt_color);}

@@ -1,0 +1,13 @@
+/*BUTTONS*/
+.minimalBtn{
+    color: var(--accent_color);
+    border: none;
+    border-radius: var(--radius);
+    padding: var(--pd_btn);
+    box-shadow: none;
+    cursor: pointer;
+    margin:  var(--margin);
+    font-size: 1.1em;
+    background: none;
+}
+.minimalBtn:hover, .minimalBtn:active{transform: scale(.95);}

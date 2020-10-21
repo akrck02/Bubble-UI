@@ -1,0 +1,13 @@
+/*BUTTONS*/
+.accentBtn{
+    color: var(--bg);
+    border: none;
+    border-radius: var(--radius);
+    padding: var(--pd_btn);
+    box-shadow: var(--box_shadow);
+    cursor: pointer;
+    margin:  var(--margin);
+    font-size: 1.1em;
+    background: var(--accent_color);
+}
+.accentBtn:hover, .accentBtn:active{transform: scale(.95);}

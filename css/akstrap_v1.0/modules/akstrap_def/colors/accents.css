@@ -1,0 +1,9 @@
+.accentGreen{
+    --accent_color: #0F9D58;
+    --accent_color_light:#5efc82;
+}
+
+.accentRed{
+    --accent_color: #DB4437;
+    --accent_color_light:#ff6f60;
+}

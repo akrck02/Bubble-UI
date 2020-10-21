@@ -1,0 +1,31 @@
+/*FLEX OPTIONS*/
+.centerFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerFlexHorizontal{
+    display: flex;
+    justify-content: center;
+}
+
+.leftFlex{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.flexWarp{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+.flexRow{
+    display: flex;
+    flex-direction: row;
+}
+
