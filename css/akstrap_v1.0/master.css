@@ -6,7 +6,8 @@ html{
     --bg: #fafafa;
     --b2: #fff;
     --b3: var(--b2);
-    --font:'Roboto thin', sans-serif;
+    --font:'Roboto light', sans-serif;
+    --fontTitle:'Roboto', sans-serif;
     --txt_color: #404040;
     --error_color: #EB5757;
     --accent_color: dodgerblue;
@@ -52,3 +53,5 @@ body{
 input[type=checkbox]{margin: 10px;}
 label{cursor: pointer;}
 label:hover{ color: var(--accent_color)}
+
+h1{font-family: var(--fontTitle);}

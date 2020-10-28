@@ -12,3 +12,12 @@
     padding-left: 20px;
     padding-right: 20px;
 }
+
+.userInputError{
+    background: var(--b2);
+    padding: var(--pd_btn);
+    border-radius: var(--radius);
+    border: 3px solid #DB4437;
+    color: var(--txt_color);
+    box-shadow:none;
+}
