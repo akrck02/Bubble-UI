@@ -1,0 +1,39 @@
+.prettyPost{
+    padding: 25px;
+    width: calc(100% - 50px);
+    max-width: 585px; 
+    background: var(--b3);
+    display: flex;
+    margin: 0%;
+    flex-wrap: wrap;
+    border: .5px solid #f1f1f1;
+    border-radius: calc(var(--radius) + 15px);
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+
+.prettyPost img{
+    width: calc(100% - 20px);
+    padding: 10px;
+    filter: drop-shadow(var(--box_shadow));
+    align-self: center;
+    border-radius: calc(var(--radius) + 25px);
+}
+
+.prettyPost h1.username{
+    margin: 0;
+    width: calc(100% - 100px);
+    align-self: center;
+    font-size: 1.4em;
+}
+
+.prettyPost h2{
+    width: 100%;
+    padding: 10px;
+    align-self: center;
+}
+
+.prettyPost .profile_pic{
+    max-width: 50px;
+    filter: none;
+}

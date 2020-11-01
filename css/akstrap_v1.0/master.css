@@ -22,10 +22,11 @@ html{
     margin: 0;
     padding: 0;
     width: 100%;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html[data-theme = "dark"]{
-    --bg: #181818;
+    --bg: #202020;
     --b2: #1B1B1B;
     --b3: #242424;
     --txt_color: #eaeaea;
