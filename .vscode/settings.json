@@ -1,8 +1,0 @@
-{
-    "liveServer.settings.port": 5501,
-    "files.exclude": {
-        "css/akstrap_v1.0/modules/akstrap_def": true,
-        "css/akstrap_v1.0/modules/akstrap_def/atoms/components/navbars": true
-    },
-    "workspace.isHidden": true
-}
