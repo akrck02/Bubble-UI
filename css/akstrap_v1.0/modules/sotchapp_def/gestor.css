@@ -5,7 +5,5 @@
 @import "settings/settings.css";
 @import "molecules/molecules.css";
 
-*{
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
+html{--b4 : #ffffff;}
+html[data-theme=dark]{--b4 : #171717;}

@@ -1,4 +1,6 @@
 .prettyPost{
+    position: relative;
+    z-index: 1;
     padding: 25px;
     width: calc(100% - 50px);
     max-width: 585px; 
@@ -6,10 +8,9 @@
     display: flex;
     margin: 0%;
     flex-wrap: wrap;
-    border: .5px solid #f1f1f1;
-    border-radius: calc(var(--radius) + 15px);
+    border-radius: calc(var(--radius) + 0px);
     padding-top: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .prettyPost img{

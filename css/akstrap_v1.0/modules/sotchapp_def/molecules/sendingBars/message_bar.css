@@ -1,0 +1,98 @@
+.message_bar{
+    --width: 50%;
+    --padding: 30px;
+    --height:  50%;
+    --max_height: 400px;
+    --right: 50px;
+    --radius: 6px;
+    --background: var(--b4);
+    --shadow: var(--box_shadow);
+
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: var(--radius);
+    justify-content: center;
+    box-shadow: var(--shadow);
+    width: var(--width);
+    padding: var(--padding);
+    right: var(--right);
+    bottom: 50px;
+    height: var(--height);
+    max-height: var(--max_height);
+    background: var(--background);
+}
+
+.message_bar textarea{
+    --border: 3px solid var(--bg);
+    --height: 50%;
+    --padding: 10px;
+    --width: calc(100% - (var(--padding) * 2));
+    --outline : none;
+    --font_weight: 500;
+    --background: var(--b2);
+    --shadow: 0px 2px 4px inset rgba(0,0,0,.15); 
+    --text_color: var(--text_color);
+    --font_size: 1.8em;
+   
+    background: var(--background);
+    border: var(--border);
+    color: var(--text_color);
+    resize: none;
+   
+    height: var(--height);
+    width: var(--width);
+
+    outline: var(--outline);
+    font-weight: var(--font_weight);
+    font-size: var(--font_size);
+    padding: var(--padding);   
+}
+
+.message_bar .icon_bar{
+    --width: 100%;
+    --height: 25%;
+    --align_items: center;
+    
+    width: var(--width);
+    height: var(--height);
+    align-items: var(--align_items);
+
+    display: flex;
+    cursor: pointer;
+}
+
+.message_bar .icon_bar .icon{
+    --max_width: 45px;
+    --margin : 1%;
+
+    max-width: var(--max_width);
+    margin: var(--margin);
+}
+
+.message_bar .icon_bar .icon:hover{
+    --translate: -2px;
+    --scale: 1.1;
+    transform: translateY(var(--translate)) scale(var(--scale));
+}
+
+.message_bar .icon_bar .icon:active{
+    --scale: .9;
+    transform: scale(var(--scale));
+}
+
+@media screen and (max-width:600px){
+    .message_bar{
+        --width: calc(80% - 20px);
+        --right: 5%;
+        --height: calc(80% - 20px);
+        --max_height: 250px;
+    }
+
+    .message_bar h1{font-size: 1.2em;}
+    .message_bar textarea{font-size: 1.2em;}
+    .message_bar .icon_bar .icon{
+        --max_width: 35px;
+    }
+}

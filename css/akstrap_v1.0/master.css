@@ -1,11 +1,12 @@
 
 @import "modules/akstrap_def/gestor.css";
+@import "modules/sotchapp_def/gestor.css";
 
 /*VARIABLES HTML*/
 html{
     --bg: #fafafa;
-    --b2: #fff;
-    --b3: var(--b2);
+    --b2: #fefefe;
+    --b3: #fff;
     --font:'Roboto light', sans-serif;
     --fontTitle:'Roboto', sans-serif;
     --txt_color: #404040;
