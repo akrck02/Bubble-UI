@@ -1,5 +1,5 @@
 main.room_main{
-    --width: 100%;
+    --width: 80%;
     --overflow_y: auto;
     --z_index: 0;
 
@@ -7,4 +7,11 @@ main.room_main{
     z-index: var(--z_index);
     width: calc(var(--width));
     overflow-y: var(--overflow_y);
+}
+@media screen and (max-width: 900px){
+    main.room_main{--width: 95%;}
+}
+
+@media screen and (max-width: 600px){
+    main.room_main{--width: 100%;}
 }

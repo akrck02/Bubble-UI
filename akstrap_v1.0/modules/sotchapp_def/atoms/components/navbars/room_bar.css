@@ -70,5 +70,4 @@ body.room_body{
 
 @media screen and (max-width: 600px){
     .room_bar{display: none;}
-    main.room_main{width: 100%;}
 }
