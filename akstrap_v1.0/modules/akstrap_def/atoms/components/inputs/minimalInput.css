@@ -5,12 +5,9 @@
    
     color: var(--txt_color);
     font-size: 1.2em;
+    
+    border-bottom: 2px solid transparent;
 }
-
-.minimalInput:focus{
-    outline: none;
-    animation: minimalInputAnim 1s;
-}
-
-.minimalInput:hover{border-bottom: .5px solid var(--accent_color);}
+.minimalInput:focus{outline: none;}
+.minimalInput:hover{ border-bottom: 2px solid var(--accent_color);}
 .minimalInput[type=text]:focus{color:var(--accent_color);}
