@@ -15,6 +15,8 @@
 
 .prettyPost img{
     width: calc(100% - 20px);
+    object-fit: cover;
+    max-height: 40vh;
     padding: 10px;
     filter: drop-shadow(var(--box_shadow));
     align-self: center;
@@ -35,6 +37,9 @@
 }
 
 .prettyPost .profile_pic{
-    max-width: 50px;
+    --size : 50px;
+    height: var(--size);
+    width: var(--size);
+    border-radius: 100%;
     filter: none;
 }

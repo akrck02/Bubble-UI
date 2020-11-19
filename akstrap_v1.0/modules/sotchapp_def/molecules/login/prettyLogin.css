@@ -43,6 +43,19 @@
     margin: 0;
 }
 
+.prettyLogin form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.prettyLogin label{
+    opacity: .65;
+    font-weight: bold;
+}
+
 @media screen and (max-width:600px){
     .prettyLogin{
         width: 80%;
