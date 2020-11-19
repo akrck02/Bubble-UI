@@ -1,6 +1,6 @@
 
-@import "modules/akstrap_def/gestor.css";
-@import "modules/sotchapp_def/gestor.css";
+@import "modules/akstrap_def/css/gestor.css";
+@import "modules/sotchapp_def/css/gestor.css";
 
 /*VARIABLES HTML*/
 html{

@@ -1,0 +1,4 @@
+@import "../../transitions/clicks.css";
+
+
+.noAnimTime{transition: none;}
