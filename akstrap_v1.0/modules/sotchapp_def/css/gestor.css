@@ -1,9 +1,9 @@
-@import "atoms/components/components.css";
-@import "layouts/layouts.css";
-@import "colors/colorSet.css";
-@import "transitions/transitions.css";
-@import "settings/settings.css";
-@import "molecules/molecules.css";
+@import "./routes/components/components.css";
+@import "./routes/components/layouts/layouts.css";
+@import "./routes/components/molecules/molecules.css";
+@import "./routes/colors/colors.css";
+@import "./routes/transitions/transitions.css";
+@import "./routes/settings/settings.css";
 
 html{--b4 : #ffffff;}
 html[data-theme=dark]{--b4 : #171717;}
