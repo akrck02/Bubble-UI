@@ -1,7 +1,7 @@
 .room_bar{
     --width: 55px;
     --padding: 2.5px;
-    --height: 100%;
+    --height: calc(100vh - 5px);
     --background: var(--b2);
     --box_shadow: var(--box_shadow); 
     --z_index: 10;
@@ -61,7 +61,9 @@ html[data-theme="dark"] .room_bar{border: none;}
 
 body.room_body{
     --width: 100vw;
-    --height: 100vh;
+    --height: 100%;
+    overflow: hidden;
+    margin: 0;
 
     display: flex;
     height: var(--height);
