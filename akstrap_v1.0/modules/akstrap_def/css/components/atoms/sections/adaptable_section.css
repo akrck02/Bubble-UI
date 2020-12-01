@@ -1,20 +1,43 @@
 .adaptableSection{
-    width: 80%;
-    max-width: 470px;
-    padding: 15px;
-    background-color: var(--b2);
-    color: var(--txt_color);
-    display:flex;
-    flex-direction: column;
-    box-shadow: var(--box_shadow);
-    border-radius: var(--radius);
+    --width:                80%;
+    --padding:              15px;
+    --display:              flex;
+    --flex-direction:       column;
+    --max-width:            calc(800px - (var(--padding)*2));
+    --background-color:     var(--b2);
+    --color:                var(--txt_color);
+    --box-shadow:           var(--box_shadow);
+    --radius:               6px;
+
+    width:              var(--width);
+    max-width:          var(--max-width);
+    padding:            var(--padding);
+    background-color:   var(--background-color);
+    color:              var(--color);
+    display:            var(--display);
+    flex-direction:     var(--flex-direction);
+    box-shadow:         var(--box-shadow);
+    border-radius:      var(--radius);
 }
 
-.adaptableSection>img{
-    position: relative;
-    width: calc(100% - 20px);
-    align-self: center;
-    margin: 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.adaptableSection img{
+    --position:     relative;
+    --width:        calc(100% - 20px);
+    --height:       70%;
+    --align-self:   center;
+    --margin:       0;
+    --margin:       20px;
+    --radius:       6px;
+
+
+    position:       var(--position);
+    width:          var(--width);
+    height:         var(--height);
+    align-self:     var(--align-self);
+    margin:         var(--margin);
+    margin-top:     var(--margin);
+    margin-bottom:  var(--margin);
+    border-radius:  var(--radius);
 }
+
+

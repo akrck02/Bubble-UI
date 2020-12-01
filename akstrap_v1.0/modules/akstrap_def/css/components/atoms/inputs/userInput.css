@@ -1,23 +1,38 @@
 /*INPUTS*/
 .userInput{
-    background: var(--b2);
-    padding: var(--pd_btn);
-    border:none;
-    border-radius: var(--radius);
-    box-shadow: var(--box_shadow);
-    color: var(--txt_color);
+    --background:   var(--b2);
+    --padding:      var(--pd_btn);
+    --radius:       var(--radius);
+    --box-shadow:   var(--box_shadow);
+    --color:        var(--txt_color);
+    --border:       none;
+
+    background:     var(--background);
+    padding:        var(--padding);
+    border:         var(--border);
+    border-radius:  var(--radius);
+    box-shadow:     var(--box-shadow);
+    color:          var(--color);
 }
 
 .userInput:focus{
-    padding-left: 20px;
-    padding-right: 20px;
+    --padding:      5px;
+    padding-left:   var(--padding);
+    padding-right:  var(--padding);
 }
 
 .userInputError{
-    background: var(--b2);
-    padding: var(--pd_btn);
-    border-radius: var(--radius);
-    border: 3px solid #DB4437;
-    color: var(--txt_color);
-    box-shadow:none;
+    --background:   var(--b2);
+    --padding:      var(--pd_btn);
+    --radius:       var(--radius);
+    --border:       3px solid #DB4437;
+    --color:        var(--txt_color);
+    --box-shadow:   none;
+
+    background:     var(--background);
+    padding:        var(--padding);
+    border-radius:  var(--radius);
+    border:         var(--border);
+    color:          var(--color);
+    box-shadow:     var(--box-shadow);
 }

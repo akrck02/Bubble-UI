@@ -1,0 +1,15 @@
+::-webkit-scrollbar {
+  --width:  5px;
+   width:   var(--width);
+}
+
+::-webkit-scrollbar-thumb {
+  --background:   var(--accent_color);
+  background:     var(--background);
+}
+  
+
+::-webkit-scrollbar-thumb:hover {
+  --background:   #555;
+  background:       var(--background);
+} 

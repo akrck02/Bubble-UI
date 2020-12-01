@@ -1,13 +1,24 @@
 .minimalInput{
-    border: none;
-    background: none;
-    padding: 10px;
-   
-    color: var(--txt_color);
-    font-size: 1.2em;
-    
-    border-bottom: 2px solid transparent;
+    --color:            var(--txt_color);
+    --border:           none;
+    --background:       none;
+    --padding:          10px;
+    --font-size:        1.2em;
+    --border-bottom:    2px solid transparent;
+
+    border:         var(--border);
+    background:     var(--border);
+    padding:        var(--padding);
+    color:          var(--color);
+    font-size:      var(--font-size);
+    border-bottom:  var(--border-bottom);
 }
 .minimalInput:focus{outline: none;}
-.minimalInput:hover{ border-bottom: 2px solid var(--accent_color);}
-.minimalInput[type=text]:focus{color:var(--accent_color);}
+.minimalInput:hover{
+    --border-bottom:    2px solid var(--accent_color);
+    border-bottom:      var(--border-bottom);
+}
+.minimalInput[type=text]:focus{
+    --color:    var(--accent_color);
+    color:      var(--color);
+}

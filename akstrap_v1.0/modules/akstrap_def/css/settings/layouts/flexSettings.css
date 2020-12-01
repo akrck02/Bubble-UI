@@ -20,12 +20,25 @@
     display: flex;
     flex-wrap: wrap;
 }
+
 .flexColumn{
     display: flex;
     flex-direction: column;
 }
+
 .flexRow{
     display: flex;
     flex-direction: row;
 }
 
+.box-all{width: calc(100%);}
+.box-half{width: 50%;}
+.box-third{width: calc(100% / 3);}
+.box-quarter{width: 25%;}
+.box-fifth{width: 20%;}
+.box-eight{width: calc(100% / 8);}
+
+.box-fraction{
+    --n: 1;
+    width: calc(100% / var(--n));
+}

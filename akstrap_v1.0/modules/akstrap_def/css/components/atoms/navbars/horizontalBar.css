@@ -1,53 +1,94 @@
 .horizontalBar{
-    background: var(--b3);
-    height: 10vh;
-    min-height: 50px;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    box-shadow: var(--box_shadow);
-    position: relative;
-    z-index: 9;
+    --background:   var(--b3);
+    --height:       10vh;
+    --min-height:   50px;
+    --padding:      5px;
+    --display:      flex;
+    --align-items:  center;
+    --flex-wrap:    wrap;
+    --box-shadow:   var(--box_shadow);
+    --position:     relative;
+    --z-index:      9;
+
+    background:     var(--background);
+    height:         var(--height);
+    min-height:     var(--min-height);
+    padding:        var(--padding);
+    display:        var(--display);
+    align-items:    var(--align-items);
+    flex-wrap:      var(--flex-wrap);
+    box-shadow:     var(--box-shadow);
+    position:       var(--position);
+    z-index:        var(--z-index);
 }
 
 .horizontalBar li{
-    list-style-type: none;
-    cursor: pointer;
-    margin: 5px;
-    padding: 10px;
-    filter: brightness(1);
-    border-radius: var(--radius);
+    --radius: var(--radius);
+    --list-style-type:  none;
+    --margin:           5px;
+    --padding:          10px;
+    --filter:           brightness(1);
+
+    list-style-type:    var(--list-style-type);
+    margin:             var(--margin);
+    padding:            var(--padding);
+    filter:             var(--filter);
+    border-radius:      var(--radius);
+    cursor:             pointer;
 }
 
-.horizontalBar li:hover{transform: translateY(-3px);}
-.horizontalBar li:hover a{opacity: 1;}
+.horizontalBar li:hover{
+    --tranform:     translateY(-3px);
+    transform:      var(--tranform);
+}
+.horizontalBar li:hover a{
+    --opacity:  1;
+    opacity:    var(--opacity);
+}
 .horizontalBar li a{
-    color: var(--txt_color);
-    text-decoration: none;
-    opacity: .5;
+    --color:    var(--txt_color);
+    --text-decoration: none;
+    --opacity: .5;
+
+    color:              var(--color);
+    text-decoration:    var(--text-decoration);
+    opacity:            var(--opacity);
 }
 
 .horizontalBar .logo{
-    max-height: 70%;
-    
-    margin: 5px;
+    --size:     7vh;
+    --margin:   5px;
+
+    height:     var(--size);
+    width:      var(--size);
+    margin:     var(--margin);
 }
 
 @media screen and (max-width:600px){
-    .horizontalBar .logo{max-height: 50px;}
+    .horizontalBar .logo{
+        --size:     50px;
+        height:     var(--size); 
+        width:      var(--size);
+    }
     .horizontalBar{
-        justify-content: center;
-        height: auto;
+        --justify-content:  center;
+        --height:           auto;
+
+        justify-content:    var(--justify-content);
+        height:             var(--height);
     }
 }
 
 @media screen and (max-width:400px){
     .horizontalBar{
-        justify-content: center;
-        height: auto;
+        --justify-content:  center;
+        --height:           auto;
+
+        justify-content:    var(--justify-content);
+        height:             var(--height);
     }
     .horizontalBar li{
-        width: 100%;
+        --width:    100%;
+        width:      var(--width);
     }
 }

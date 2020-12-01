@@ -3,3 +3,11 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.onepage{
+    --padding-x:    0; 
+    --padding-y:    0;
+
+    height: calc(100vh - (var(--padding-y) * 2));
+    width:  calc(100vw - (var(--padding-x) * 2));
+}

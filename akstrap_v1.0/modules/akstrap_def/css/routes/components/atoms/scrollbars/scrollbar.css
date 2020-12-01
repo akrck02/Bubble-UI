@@ -1,13 +1,1 @@
- /* width */
-::-webkit-scrollbar {
-   width: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--accent_color);
-}
-  
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-} 
+@import "../../../../components/atoms/scrollbar/scrollbar.css";

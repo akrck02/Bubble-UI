@@ -1,13 +1,26 @@
-.containerSquare{
-    --cont_square-width: 10vw;
-    position: relative;
-    width: var(--container1_1-width);
-    height: var(--container1_1-width);
+.square{
+    --size: 10vw;
+
+    position:   relative;
+    width:      var(--size);
+    height:     var(--size);
 }
 
-.containerSquareMini{
-    --cont_square_mini-width: 3vw;
-    position: relative;
-    width: var(--cont_square_mini-width);
-    height: var(--cont_square_mini-width);
+.circle{
+    --size: 10vw;
+
+    position:   relative;
+    width:      var(--size);
+    height:     var(--size);
+    border-radius: 100%;
+}
+
+.squircle{
+    --size:     10vw;
+    --radius:   0%;
+
+    position:       relative;
+    width:          var(--size);
+    height:         var(--size);
+    border-radius:  var(--radius);
 }

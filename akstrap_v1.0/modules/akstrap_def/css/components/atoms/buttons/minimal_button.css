@@ -1,13 +1,22 @@
 /*BUTTONS*/
 .minimalBtn{
-    color: var(--accent_color);
-    border: none;
-    border-radius: var(--radius);
-    padding: var(--pd_btn);
-    box-shadow: none;
-    cursor: pointer;
-    margin:  var(--margin);
-    font-size: 1.1em;
-    background: none;
+    --color:        var(--accent_color);
+    --radius:       var(--radius);
+    --padding:      var(--pd_btn);
+    --margin:       var(--margin);
+    --font-size:    1.1em;
+    --border:       none;
+    --background:   none;
+    --box-shadow:   none;
+
+    color:              var(--color);
+    border:             var(--border);
+    border-radius:      var(--radius);
+    padding:            var(--padding);
+    box-shadow:         var(--box-shadow);
+    margin:             var(--margin);
+    font-size:          var(--font-size);
+    background:         var(--background);
+    cursor:             pointer;
 }
 .minimalBtn:hover, .minimalBtn:active{transform: scale(.95);}

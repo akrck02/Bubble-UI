@@ -1,3 +1,4 @@
 label.prettyCheck:active{
-    letter-spacing: 2px;
+    --letter-spacing:   2px;
+    letter-spacing:     var(--letter-spacing);
 }

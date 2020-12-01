@@ -1,15 +1,27 @@
 .minimalSection{
-    width: 80%;
-    max-width: 500px;
-    padding: 10px;
-    color: var(--txt_color);
-    display:flex;
-    flex-direction: column;
+    --width:            80%;
+    --max-width:        500px;
+    --padding:          10px;
+    --color:            var(--txt_color);
+    --display:          flex;
+    --flex-direction:   column;
+
+    width:              var(--width);
+    max-width:          var(--max-width);
+    padding:            var(--padding);
+    color:              var(--color);
+    display:            var(--display);
+    flex-direction:     var(--flex-direction);
 }
 
 .minimalSection>img{
-    position: relative;
-    width: 100%;
-    align-self: center;
-    margin: 0;
+    --position:     relative;
+    --width:        100%;
+    --align-self:   center;
+    --margin:       0;
+
+    position:   var(--position);
+    width:      var(--width);
+    align-self: var(--align-self);
+    margin:     var(--margin);
 }
