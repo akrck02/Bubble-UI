@@ -11,6 +11,7 @@
     border-radius: calc(var(--radius) + 0px);
     padding-top: 15px;
     margin-bottom: 10px;
+    align-self: center;
 }
 
 .prettyPost img{

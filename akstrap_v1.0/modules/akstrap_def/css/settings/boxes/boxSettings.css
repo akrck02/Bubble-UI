@@ -11,3 +11,12 @@
     height: calc(100vh - (var(--padding-y) * 2));
     width:  calc(100vw - (var(--padding-x) * 2));
 }
+
+.fixed{
+    --top:      0;
+    --left:   0;
+
+    position:   fixed;
+    left:       var(--left);
+    top:        var(--top);
+}

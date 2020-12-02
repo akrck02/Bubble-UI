@@ -1,6 +1,7 @@
 .horizontalBar{
     --background:   var(--b3);
     --height:       10vh;
+    --width:        100%;
     --min-height:   50px;
     --padding:      5px;
     --display:      flex;
@@ -14,6 +15,7 @@
     height:         var(--height);
     min-height:     var(--min-height);
     padding:        var(--padding);
+    width:          var(--width);
     display:        var(--display);
     align-items:    var(--align-items);
     flex-wrap:      var(--flex-wrap);
