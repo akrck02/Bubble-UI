@@ -2,7 +2,7 @@
 .accentBtn{
 
     --color:        var(--bg);
-    --radius:       var(--radius);
+    --radius:       3px;
     --padding:      var(--pd_btn);
     --box-shadow:   var(--box_shadow);
     --background:   var(--accent_color);

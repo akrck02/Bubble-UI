@@ -16,9 +16,9 @@
 }
 
 .userInput:focus{
-    --padding:      5px;
-    padding-left:   var(--padding);
-    padding-right:  var(--padding);
+    --new_padding:      15px;
+    padding-left:   var(--new_padding);
+    padding-right:  var(--new_padding);
 }
 
 .userInputError{
