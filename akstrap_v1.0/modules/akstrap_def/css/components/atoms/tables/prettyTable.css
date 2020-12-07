@@ -1,6 +1,6 @@
 .prettyTable{
     --padding:          1%;
-    --width:            90%;
+    --width:            auto;
     --display:          flex;
     --flex-direction:   row;
     --flex-wrap:        wrap;
@@ -12,6 +12,7 @@
     flex-direction:     var(--flex-direction);
     flex-wrap:          var(--flex-wrap);
     justify-content:    var(--justify-content);
+    justify-self:       center;
 }
 
 .prettyTableColumn{
@@ -20,7 +21,7 @@
     --flex-direction:   column;
     --justify-content:  center;
     --padding:          0;
-    --margin:           5px;
+    --margin:           3px;
 
     display:            var(--display);
     flex-wrap:          var(--flex-wrap);
@@ -28,20 +29,23 @@
     justify-content:    var(--justify-content);
     padding:            var(--padding);
     margin:             var(--margin);
+
 }
 
 .prettyTable .prettyTableHeader, .prettyTable .prettyTableData{
     --box-shadow:       var(--box_shadow);
     --padding:          10px;
     --radius:           var(--radius);
+    --min-width:        120px;
 
     box-shadow:         var(--box-shadow);
     padding:            var(--padding);
     border-radius:      var(--radius);
+    min-width:          var(--min-width);
 }
 
 .prettyTable .prettyTableData{
-    --background:   var(--b2);
+    --background:   var(--b3);
     --text-align:   center;
 
     background:     var(--background);

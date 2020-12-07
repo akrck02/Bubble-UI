@@ -23,7 +23,7 @@
     display:            var(--display);
     justify-content:    var(--justify-content);
     align-items:        var(--align-items);
-    padding:    var(--padding);
+    padding:            var(--padding);
 }
 
 .checkmark {
@@ -37,6 +37,7 @@
     --box-shadow: var(--box_shadow);
     --background-color: #fff;
 
+    box-sizing:border-box;
     position:           var(--position);
     top:                var(--top);
     left:               var(--left);
@@ -46,10 +47,10 @@
     margin:             var(--margin);
     box-shadow:         var(--box-shadow);
     background-color:   var(--background-color);
+    border:             5px solid transparent;
   }
 
 .prettyCheck  input:checked ~ .checkmark {
-    box-sizing:border-box;
     border: 5px solid var(--color);
     --background-color: var(--b2);
 }

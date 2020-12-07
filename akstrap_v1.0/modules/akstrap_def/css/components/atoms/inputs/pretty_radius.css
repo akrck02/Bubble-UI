@@ -36,6 +36,7 @@
     --box-shadow: var(--box_shadow);
     --background-color: #fff;
 
+    box-sizing:         border-box;
     position:           var(--position);
     top:                var(--top);
     left:               var(--left);
@@ -45,6 +46,7 @@
     margin:             var(--margin);
     box-shadow:         var(--box-shadow);
     background-color:   var(--background-color);
+    border:             5px solid transparent;
   }
 
 .prettyRadius  input:checked ~ .checkmark {
