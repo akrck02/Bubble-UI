@@ -1,0 +1,4 @@
+.minimalInfo{
+    --color:    var(--info_color);
+    color:      var(--color);
+}

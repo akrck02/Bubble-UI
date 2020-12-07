@@ -1,0 +1,4 @@
+.minimalWarning{
+    --color:    var(--warning_color);
+    color:      var(--color);
+}

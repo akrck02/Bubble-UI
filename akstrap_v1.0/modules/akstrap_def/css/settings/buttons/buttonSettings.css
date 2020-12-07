@@ -1,0 +1,4 @@
+button[disabled]{
+    transition: none;
+    animation:  none;
+}

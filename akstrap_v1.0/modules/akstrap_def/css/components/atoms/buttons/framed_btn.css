@@ -1,0 +1,83 @@
+.framedBtn{
+    --radius:       3px;
+    --padding:      var(--pd_btn);
+    --box-shadow:   var(--box_shadow);
+    --background:   rgba(0,0,0,0);
+    --margin:       var(--margin);
+    --color:        var(--accent_color);
+    --font-color:   var(--color);
+    --border-color: var(--color);
+    --border:       2px solid var(--border-color);
+    --font-size:    1.1em;
+
+    color:          var(--font-color);
+    border:         var(--border);
+    border-radius:  var(--radius);
+    padding:        var(--padding);
+    box-shadow:     var(--box-shadow);
+    margin:         var(--margin);
+    background:     rgba(0,0,0,0);;
+    cursor:         pointer;
+    font-size:      1.1em;
+}
+
+.framedRoundedBtn{
+    --radius:       25px;
+    --padding:      var(--pd_btn);
+    --box-shadow:   var(--box_shadow);
+    --background:   rgba(0,0,0,0);
+    --margin:       var(--margin);
+    --color:        var(--accent_color);
+    --font-color:   var(--color);
+    --border-color: var(--color);
+    --border:       2px solid var(--border-color);
+    --font-size:    1.1em;
+
+    color:          var(--font-color);
+    border:         var(--border);
+    border-radius:  var(--radius);
+    padding:        var(--padding);
+    box-shadow:     var(--box-shadow);
+    margin:         var(--margin);
+    background:     var(--background);
+    cursor:         pointer;
+    font-size:      1.1em;
+}
+
+.framedDashedBtn{
+    --radius:       3px;
+    --padding:      var(--pd_btn);
+    --box-shadow:   var(--box_shadow);  
+    --background:   rgba(0,0,0,0);
+    --margin:       var(--margin);
+    --color:        var(--accent_color);
+    --font-color:   var(--color);
+    --border:       2px dashed rgba(0,0,0,0);
+    --font-size:    1.1em;
+
+    color:          var(--font-color);
+    border:         var(--border);
+    border-radius:  var(--radius);
+    padding:        var(--padding);
+    margin:         var(--margin);
+    background:     var(--background);
+    cursor:         pointer;
+    font-size:      1.1em;
+
+}
+
+.framedRoundedBtn:hover , .framedRoundedBtn:active, .framedBtn:hover , .framedBtn:active{
+    background:     var(--color);
+    --font-color:   var(--bg);
+}
+
+.framedDashedBtn:hover, .framedDashedBtn:active{
+    border-color:     var(--border-color);
+    --box-shadow:       var(--box-shadow);
+}
+
+.framedBtn[disabled], .framedDashedBtn[disabled], .framedRoundedBtn[disabled]{
+    --border-color:     var(--disabled_color);
+    --font-color:       var(--disabled_color);
+}
+

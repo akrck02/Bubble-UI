@@ -1,0 +1,4 @@
+.minimalError{
+    --color:    var(--error_color);
+    color:      var(--color);
+}

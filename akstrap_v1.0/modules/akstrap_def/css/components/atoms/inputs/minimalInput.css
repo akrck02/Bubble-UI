@@ -22,3 +22,26 @@
     --color:    var(--accent_color);
     color:      var(--color);
 }
+
+.discreteInput{
+    --color:            var(--txt_color);
+    --border:           none;
+    --background:       none;
+    --padding:          10px;
+    --font-size:        1.2em;
+    --border-color:     var(--accent_color);
+    --border-bottom:    2px solid var(--border-color);
+
+    border:         var(--border);
+    background:     var(--border);
+    padding:        var(--padding);
+    color:          var(--color);
+    font-size:      var(--font-size);
+    border-bottom:  var(--border-bottom);
+}
+
+.discreteInput:hover, .discreteInput:active{
+    --padding-x: 15px;
+    padding-left: var(--padding-x);
+    padding-right: var(--padding-x);
+}

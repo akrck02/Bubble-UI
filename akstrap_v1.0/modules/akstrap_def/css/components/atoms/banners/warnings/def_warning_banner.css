@@ -1,0 +1,28 @@
+.defWarningBanner{
+    --background:       var(--warning_color);
+    --height:           50px;
+    --width:            50%;
+    --max-width:        500px;
+    --min-width:        100px;
+    --padding-y:        5px;
+    --padding-x:        20px;
+    --margin-x:         0px;
+    --margin-y:         10px;
+    --text-align:       center;
+    --border-radius:    3px;
+    --color:            var(--b3);
+
+    background:         var(--background);
+    padding:            var(--padding-y) var(--padding-x);
+    height:             var(--height);
+    width:              var(--width);
+    max-width:          var(--max-width);
+    text-align:         var(--text-align);
+    border-radius:      var(--border-radius);
+    margin:             var(--margin-y) var(--margin-x);
+    color:              var(--color);
+    font-weight:        550;;
+}
+
+
+@media screen and (max-width:600px){.defWarningBanner{--max-width:80%; --width: 80%;}} 

@@ -9,10 +9,26 @@ html{
     --b3:                  #fff;
     --font:                 'Roboto light', sans-serif;
     --fontTitle:            'Roboto', sans-serif;
+
     --txt_color:            #404040;
     --error_color:          #EB5757;
-    --accent_color:         dodgerblue;
+    --success_color:        #00C851;
+    --warning_color:        #f0ad4e;
+    --info_color:           #5bc0de;
+    --disabled_color:       #aaaaaa;    
+
+    --RGB_txt_color:            64,64,64;
+    --RGB_error_color:          235,87,87;
+    --RGB_success_color:        0,200,81;
+    --RGB_warning_color:        255,187,51;
+    --RGB_disabled_color:       170,170,170;    
+
+    --accent_color:         #1e90ff;
     --accent_color_light:   #80c0ee;
+
+    --RGB_accent_color:            30,144,255;
+    --RGB_accent_color_light:      128,192,238;
+
     --box_shadow:           0px 2px 4px rgba(0,0,0,.15);
     --box_shadow_right:     2px 0px 4px rgba(0,0,0,.15);
     --radius:               3px;

@@ -1,6 +1,5 @@
 /*BUTTONS*/
 .accentBtn{
-
     --color:        var(--bg);
     --radius:       3px;
     --padding:      var(--pd_btn);
