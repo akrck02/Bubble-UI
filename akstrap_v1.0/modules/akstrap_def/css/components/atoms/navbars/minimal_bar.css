@@ -1,0 +1,67 @@
+.minimal_bar{
+    --default :       #24292e;
+    --default_txt:    #fafafa;
+
+    --padding:            10px;
+    --background:         var(--default);
+    --color:              var(--default_txt);
+    --width:              100%;
+    --height:             8vh;
+    --z-index:            3;
+    --display:            flex;
+    --align-items:        center;
+    --justify-content:    flex-start;
+
+    padding:            var(--padding);
+    background:         var(--background);
+    color:              var(--color);
+    width:              var(--width);
+    height:             var(--height);
+    z-index:            var(--z-index);
+    display:            var(--display);
+    align-items:        var(--align-items);
+    justify-content:    var(--justify-content);
+}
+
+html[data-theme='dark'] .minimal_bar{
+    --default :     #e9e9e9;
+    --default_txt:   #24292e;
+}
+
+.minimal_bar .logo{
+    --height:         calc(8vh - 20px);
+    --width:          calc(8vh - 20px);
+    --object-fit:     cover;
+
+    height:       var(--height);
+    width:        var(--width);
+    object-fit:   var(--object-fit);
+}
+
+.minimal_bar a{
+    --color:    var(--default_txt);
+    --display:  block;
+    --filter:   brightness(.8);
+    --padding:  5px;
+
+    display:    var(--display);
+    filter:     var(--filter);
+    padding:    var(--padding);   
+}
+
+.minimal_bar a:hover{
+    filter: brightness(1);
+    filter: var(--filter);
+}
+
+
+.minimal_bar a.selected{
+    --border-bottom:    2px solid var(--default_txt);
+    border-bottom:      var(--border-bottom);
+}
+
+.minimal_bar *{
+    --margin:   10px;
+    margin:     var(--margin);
+}
+

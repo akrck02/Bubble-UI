@@ -30,6 +30,6 @@
 
 .opacity:hover{
     --opacity: .5;
-    filter: opacity(var(opacity));
+    filter: opacity(var(--opacity));
 }
 

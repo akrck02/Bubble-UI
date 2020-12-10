@@ -1,14 +1,19 @@
 
-@import "modules/akstrap_def/css/gestor.css";
-@import "modules/sotchapp_def/css/gestor.css";
+@import "./modules/akstrap_def/css/gestor.css";
+@import "./modules/sotchapp_def/css/gestor.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu+Mono&display=swap');
 
 /*VARIABLES HTML*/
 html{
-    --bg:                  #fafafa;
-    --b2:                  #fefefe;
+    --bg:                  #fafafa;  
+    --b2:                  #fefefe;  
     --b3:                  #fff;
+    --b_alt:               #f7f7f7;
     --font:                 'Roboto light', sans-serif;
     --fontTitle:            'Roboto', sans-serif;
+    --fontConsole:          'Ubuntu Mono', monospace;
 
     --txt_color:            #404040;
     --error_color:          #EB5757;
@@ -18,7 +23,7 @@ html{
     --disabled_color:       #aaaaaa;    
 
     --RGB_txt_color:            64,64,64;
-    --RGB_error_color:          235,87,87;
+    --RGB_error_color:          235,87,87; 
     --RGB_success_color:        0,200,81;
     --RGB_warning_color:        255,187,51;
     --RGB_disabled_color:       170,170,170;    
@@ -37,7 +42,7 @@ html{
     --margin:               10px;
     --outline:              .5px solid lightgray;
     
-    margin:                         0;
+    margin:                         0; 
     padding:                        0;
     width:                          100%;
     overflow-x:                     hidden ;
@@ -46,8 +51,9 @@ html{
 
 html[data-theme = "dark"]{
     --bg:                 #202020;
-    --b2:                 #1B1B1B;
+    --b2:                 #151515;
     --b3:                 #242424;
+    --b_alt:              #101010;
     --txt_color:          #eaeaea;
     --box_shadow:           0px 2px 4px rgba(0,0,0,.15);
     --box_shadow_right:     2px 0px 4px rgba(0,0,0,.15);
@@ -72,3 +78,11 @@ input[type=checkbox]{margin: 10px;}
 label{cursor: pointer;}
 label:hover{ color: var(--accent_color)}
 h1{font-family: var(--fontTitle);}
+button:focus, input:focus{    outline: none;}
+a{
+    --color:            var(--accent_color);
+    --text-decoration : none;
+
+    color:              var(--color);
+    text-decoration:    var(--text-decoration);
+}

@@ -8,8 +8,3 @@
   background:     var(--background);
 }
   
-
-::-webkit-scrollbar-thumb:hover {
-  --background:   #555;
-  background:       var(--background);
-} 
