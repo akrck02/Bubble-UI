@@ -5,7 +5,7 @@
   --alpha:              .5;
   --background-color:   var(--RGB_accent_color);
   --background:         rgba(var(--background-color),var(--alpha));
-  --margin:             var(--margin);
+  --margin:             10px;
   --color:              var(--bg);
   --font-color:         var(--color);
   --border:             none;

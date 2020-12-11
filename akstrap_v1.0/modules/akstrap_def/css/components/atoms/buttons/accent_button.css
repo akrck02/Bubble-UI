@@ -5,7 +5,7 @@
     --padding:      var(--pd_btn);
     --box-shadow:   var(--box_shadow);
     --background:   var(--accent_color);
-    --margin:       var(--margin);
+    --margin:       10px;
     --border:       none;
     --font-size:    1.1em;
 

@@ -3,7 +3,7 @@
     --padding:      var(--pd_btn);
     --box-shadow:   var(--box_shadow);
     --background:   rgba(0,0,0,0);
-    --margin:       var(--margin);
+    --margin:       10px;
     --color:        var(--accent_color);
     --font-color:   var(--color);
     --border-color: var(--color);
