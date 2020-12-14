@@ -13,6 +13,7 @@
     --align-items:        center;
     --justify-content:    flex-start;
 
+    position:           relative;
     padding:            var(--padding);
     background:         var(--background);
     color:              var(--color);
@@ -31,12 +32,11 @@ html[data-theme='dark'] .minimal_bar{
 }
 
 .minimal_bar .logo{
-    --height:         calc(8vh - 20px);
-    --width:          calc(8vh - 20px);
+    position: relative;
+    --height:         70%;
     --object-fit:     cover;
 
     height:       var(--height);
-    width:        var(--width);
     object-fit:   var(--object-fit);
 }
 

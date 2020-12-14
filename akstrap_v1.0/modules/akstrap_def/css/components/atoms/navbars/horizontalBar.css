@@ -2,7 +2,6 @@
     --background:   var(--b3);
     --height:       10vh;
     --width:        100%;
-    --min-height:   50px;
     --padding:      5px;
     --display:      flex;
     --align-items:  center;
@@ -13,7 +12,6 @@
 
     background:     var(--background);
     height:         var(--height);
-    min-height:     var(--min-height);
     padding:        var(--padding);
     width:          var(--width);
     display:        var(--display);
@@ -50,7 +48,7 @@
 }
 
 .horizontalBar li:hover{
-    --tranform:     translateY(-3px);
+    --tranform:     translateY(-2px);
     transform:      var(--tranform);
 }
 .horizontalBar li:hover a{
@@ -68,43 +66,12 @@
 }
 
 .horizontalBar .logo{
-    --size:     7vh;
+    --size:     70%;
     --margin:   5px;
 
     height:     var(--size);
-    width:      var(--size);
+    width:      calc(var(--height) * .7);
     margin:     var(--margin);
 }
 
-@media screen and (max-width:600px){
-    .horizontalBar .logo{
-        --size:     50px;
-        height:     var(--size); 
-        width:      var(--size);
-    }
-    .horizontalBar{
-        --justify-content:  center;
-        --height:           auto;
 
-        justify-content:    var(--justify-content);
-        height:             var(--height);
-    }
-    .web_show_def main.withHorizontalBar{
-        --height:   auto;
-        height:     var(--height);
-    }
-}
-
-@media screen and (max-width:400px){
-    .horizontalBar{
-        --justify-content:  center;
-        --height:           auto;
-
-        justify-content:    var(--justify-content);
-        height:             var(--height);
-    }
-    .horizontalBar li{
-        --width:    100%;
-        width:      var(--width);
-    }
-}

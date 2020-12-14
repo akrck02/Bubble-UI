@@ -49,6 +49,7 @@ html[data-theme='dark'] .elegant_btn{
     transform: translateY(100%);
 }
 
+
 .elegant_btn.rounded::before{
     border-radius: 100%;
 }
@@ -69,6 +70,3 @@ html[data-theme='dark'] .elegant_btn:hover{
 .elegant_btn:hover::before{
     transform: translate(0);
 }
-
-
-
