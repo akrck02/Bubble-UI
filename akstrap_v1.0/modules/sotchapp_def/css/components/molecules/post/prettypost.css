@@ -17,11 +17,10 @@
 .prettyPost img{
     width: calc(100% - 20px);
     object-fit: cover;
-    max-height: 40vh;
+    max-height: 500px;
     padding: 10px;
-    filter: drop-shadow(var(--box_shadow));
     align-self: center;
-    border-radius: calc(var(--radius) + 25px);
+    border-radius: 12px;
 }
 
 .prettyPost h1.username{
@@ -39,6 +38,7 @@
 
 .prettyPost .profile_pic{
     --size : 50px;
+    object-fit: cover;
     height: var(--size);
     width: var(--size);
     border-radius: 100%;

@@ -11,6 +11,13 @@
     --text-align:       center;
     --border-radius:    3px;
     --color:            var(--b3);
+    --display:          flex;
+    --justify-content:  center;
+    --align-items:      center;
+
+    display:            var(--display);
+    justify-content:    var(--justify-content);
+    align-items:        var(--align-items);
 
     background:         var(--background);
     padding:            var(--padding-y) var(--padding-x);

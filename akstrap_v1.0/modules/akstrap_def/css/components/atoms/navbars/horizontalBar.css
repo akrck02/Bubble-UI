@@ -1,7 +1,7 @@
 .horizontalBar{
     --background:   var(--b3);
     --height:       10vh;
-    --width:        100%;
+    --width:        calc(100% - 10px);
     --padding:      5px;
     --display:      flex;
     --align-items:  center;
