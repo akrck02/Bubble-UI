@@ -1,5 +1,4 @@
-@import "../../../components/molecules/login/prettyLogin.css";
-@import "../../../components/molecules/post/prettypost.css";
-@import "../../../components/molecules/post/room_post.css";
-@import "../../../components/molecules/sendingBars/sending_bars.css";
 @import "./views/views.css";
+@import "./login/login.css";
+@import "./post/post.css";
+@import "./sending_bars/sending_bars.css";
