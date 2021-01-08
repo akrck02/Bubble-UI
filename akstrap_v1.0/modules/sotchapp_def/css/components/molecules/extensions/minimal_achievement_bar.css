@@ -1,0 +1,16 @@
+.minimal_achievement_bar{
+    position: relative;
+    width: 80%;
+    height: 50px;
+    max-width: 400px;
+    overflow-x: scroll;
+    position: relative;
+}
+
+.minimal_achievement_bar img{
+    filter: drop-shadow(var(--box_shadow));
+    position: relative;
+    height: 100%;
+    margin: 1%;
+}
+
