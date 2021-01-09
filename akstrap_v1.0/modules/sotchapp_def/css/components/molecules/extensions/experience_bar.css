@@ -1,10 +1,9 @@
 .experience_bar{
     position: relative;
-  
     background: var(--bg);
     box-shadow: var(--box_shadow);
     margin: 10px;
-    max-width: 400px;
+    max-width: 550px;
     width: 80%;
     border-radius: 100px;
     height: 25px;

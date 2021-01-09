@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; 
-    max-width: 500px;
+    max-width: 585px;
     margin-bottom: 20px;
 
 }
@@ -16,9 +16,9 @@
     margin: .7%;
 }
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 700px){
     .minimal_gallery img{
-        width: 130px;
-        height: 130px;
+        width: 180px;
+        height: 180px;
     }
 }
