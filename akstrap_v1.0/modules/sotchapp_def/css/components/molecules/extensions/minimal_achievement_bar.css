@@ -1,16 +1,26 @@
 .minimal_achievement_bar{
     position: relative;
     width: 80%;
-    height: 50px;
+    height: auto;
     max-width: 400px;
-    overflow-x: scroll;
-    position: relative;
+    min-height: 50px;
+    overflow: hidden;
+    background: var(--b2);
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
 }
 
 .minimal_achievement_bar img{
-    filter: drop-shadow(var(--box_shadow));
     position: relative;
-    height: 100%;
     margin: 1%;
+    width: 9vw;
+    max-width: 50px;
+    z-index: 9;
+    filter: drop-shadow(0px 1px 2px rgba(0,0,0,.1));
 }
 
+.minimal_achievement_bar::-webkit-scrollbar{
+    width: none;
+    display: none;
+}
