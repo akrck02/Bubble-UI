@@ -1,9 +1,9 @@
 .fixed_message{
-    color: #c5c5c5;
+    color: var(--smooth_txt_color);
     padding: 20px;
     border-radius: 12px;
     width: 80%;
     max-width: 530px;
     text-align: center;
-    border: 2px solid lightgray;
+    border: 1.8px solid lightgray;
 }
