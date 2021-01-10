@@ -44,3 +44,31 @@
     border-radius: 100%;
     filter: none;
 }
+
+.prettyPost .comment_bar{
+    position: relative;
+    width: 100%;
+    display: flex;
+    font-size: min(13pt,3vw);
+    color: var(--smooth_txt_color);
+}
+
+.prettyPost .comment_bar .user {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+
+.prettyPost .comment_bar .icon{
+    width: 30px;
+    justify-self: flex-end;
+}
+
+.prettyPost .comment_bar  p{
+    display: flex;
+    justify-content: center;
+    text-overflow: ellipsis;
+    justify-content: center;
+}
+
+
