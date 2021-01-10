@@ -78,8 +78,8 @@ body{
 input[type=checkbox]{margin: 10px;}
 label{cursor: pointer;}
 label:hover{ color: var(--accent_color)}
+button:focus, input:focus{ outline: none;}
 h1{font-family: var(--fontTitle);}
-button:focus, input:focus{    outline: none;}
 a{
     --color:            var(--accent_color);
     --text-decoration : none;
