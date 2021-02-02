@@ -1,3 +1,10 @@
 @import "../../colors/accents.css";
 
 .textColor{color:var(--txt_color);}
+
+.bg_accent{ background: var(--accent_color);}
+.bg_success{ background: var(--success_color);}
+.bg_error{ background: var(--error_color);}
+.bg_info{ background: var(--info_color);}
+.bg_warning{ background: var(--warning_color);}
+.bg_disabled{ background: var(--disabled_color);}
