@@ -5,8 +5,8 @@
 }
 
 .onepage{
-    --padding-x:    0; 
-    --padding-y:    0;
+    --padding-x:    0px; 
+    --padding-y:    0px;
 
     height: calc(100vh - (var(--padding-y) * 2));
     width:  calc(100vw - (var(--padding-x) * 2));
@@ -19,4 +19,60 @@
     position:   fixed;
     left:       var(--left);
     top:        var(--top);
+}
+
+.box-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-x-center{
+    display: flex;
+    justify-content: center;
+}
+
+.box-x-start{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.box-x-end{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.box-x-around{
+    display:flex;
+    justify-content: space-around;
+}
+
+.box-x-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-y-center{
+    display: flex;
+    align-items: center;
+}
+
+.box-warp{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.box-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.b-fr{
+    --n: 1;
+    width: calc(100% / var(--n));
 }

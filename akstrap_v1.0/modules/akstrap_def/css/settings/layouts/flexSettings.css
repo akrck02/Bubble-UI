@@ -5,17 +5,6 @@
     align-items: center;
 }
 
-.centerFlexHorizontal{
-    display: flex;
-    justify-content: center;
-}
-
-.leftFlex{
-    display: flex;
-    justify-content: left;
-    align-items: flex-start;
-}
-
 .flexWarp{
     display: flex;
     flex-wrap: wrap;
@@ -31,14 +20,7 @@
     flex-direction: row;
 }
 
-.box-all{width: calc(100%);}
-.box-half{width: 50%;}
-.box-third{width: calc(100% / 3);}
-.box-quarter{width: 25%;}
-.box-fifth{width: 20%;}
-.box-eight{width: calc(100% / 8);}
-
-.box-fraction{
+.b-fr{
     --n: 1;
     width: calc(100% / var(--n));
 }
