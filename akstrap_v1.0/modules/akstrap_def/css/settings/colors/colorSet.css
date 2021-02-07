@@ -8,3 +8,5 @@
 .bg_info{ background: var(--info_color);}
 .bg_warning{ background: var(--warning_color);}
 .bg_disabled{ background: var(--disabled_color);}
+.bg_light{ background: #fafafa;}
+.bg_dark{ background: #101010;}

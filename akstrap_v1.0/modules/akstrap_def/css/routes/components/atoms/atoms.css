@@ -8,3 +8,4 @@
 @import "./tables/tables.css";
 @import "./text/text.css";
 @import "./cards/cards.css";
+@import "../../../components/atoms/banners/badge.css";

@@ -76,3 +76,11 @@
     --n: 1;
     width: calc(100% / var(--n));
 }
+
+.box-center-x-self{
+    justify-self: center;
+}
+
+.box-center-y-self{
+    align-self: center;
+}
