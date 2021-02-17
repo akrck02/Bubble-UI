@@ -1,4 +1,3 @@
-<img src="akstrap.png">
 <h2>The modern CSS framework</h2>
 <h4>New Features:</h4>
 <li>Custom themes</li>
