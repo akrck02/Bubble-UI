@@ -1,4 +1,4 @@
-<h2>The modern CSS framework</h2>
+<h2>Bubble Modern UI</h2>
 <h4>New Features:</h4>
 <img src='./Bubble_banner.png' style='width:80%;max-width:400px;'/>
 <li>Custom themes</li>
