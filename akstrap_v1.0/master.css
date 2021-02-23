@@ -21,13 +21,19 @@ html{
     --success_color:        #00C851;
     --warning_color:        #f0ad4e;
     --info_color:           #5bc0de;
-    --disabled_color:       #aaaaaa;    
+    --disabled_color:       #aaaaaa;   
+    --dark_color:           #101010;
+    --light_color:          #fafafa; 
 
+    --RGB_bg_color:             250,250,250;    
     --RGB_txt_color:            64,64,64;
     --RGB_error_color:          235,87,87; 
     --RGB_success_color:        0,200,81;
     --RGB_warning_color:        255,187,51;
+    --RGB_info_color:           91,192,222;    
     --RGB_disabled_color:       170,170,170;    
+    --RGB_light_color:          250,250,250;    
+    --RGB_dark_color:           16,16,16;    
 
     --accent_color:         #1e90ff;
     --accent_color_light:   #80c0ee;
@@ -61,7 +67,10 @@ html[data-theme = "dark"]{
     --outline:              .5px solid #161616;
 }
 
-*{transition: .25s;}
+*{
+    box-sizing: border-box;
+    transition: .25s;
+}
 *:focus{outline: var(--outline);}
 
 /*ELEMENT OPTIONS*/

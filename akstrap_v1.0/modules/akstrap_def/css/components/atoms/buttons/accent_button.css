@@ -1,5 +1,5 @@
 /*BUTTONS*/
-.accentBtn{
+.accent_btn{
     --color:        var(--bg);
     --radius:       3px;
     --padding:      var(--pd_btn);
@@ -19,4 +19,4 @@
     cursor:         pointer;
     font-size:      1.1em;
 }
-.accentBtn:hover, .accentBtn:active{transform: scale(.95);}
+.accent_btn:hover, .accent_btn:active{transform: scale(.95);}

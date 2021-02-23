@@ -4,13 +4,6 @@
     margin-right: auto;
 }
 
-.onepage{
-    --padding-x:    0px; 
-    --padding-y:    0px;
-
-    height: calc(100vh - (var(--padding-y) * 2));
-    width:  calc(100vw - (var(--padding-x) * 2));
-}
 
 .fixed{
     --top:      0;
