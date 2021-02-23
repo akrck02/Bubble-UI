@@ -1,4 +1,4 @@
-.framedBtn{
+.framed_btn{
     --radius:       3px;
     --padding:      var(--pd_btn);
     --box-shadow:   var(--box_shadow);
@@ -21,7 +21,7 @@
     font-size:      1.1em;
 }
 
-.framedRoundedBtn{
+.framed_rounded_btn{
     --radius:       25px;
     --padding:      var(--pd_btn);
     --box-shadow:   var(--box_shadow);
@@ -44,7 +44,7 @@
     font-size:      1.1em;
 }
 
-.framedDashedBtn{
+.framed_dashed_btn{
     --radius:       3px;
     --padding:      var(--pd_btn);
     --box-shadow:   var(--box_shadow);  
@@ -66,17 +66,17 @@
 
 }
 
-.framedRoundedBtn:hover , .framedRoundedBtn:active, .framedBtn:hover , .framedBtn:active{
+.framed_rounded_btn:hover , .framed_rounded_btn:active, .framed_btn:hover , .framed_btn:active{
     background:     var(--color);
     --font-color:   var(--bg);
 }
 
-.framedDashedBtn:hover, .framedDashedBtn:active{
+.framed_dashed_btn:hover, .framed_dashed_btn:active{
     border-color:     var(--border-color);
     --box-shadow:       var(--box-shadow);
 }
 
-.framedBtn[disabled], .framedDashedBtn[disabled], .framedRoundedBtn[disabled]{
+.framed_btn[disabled], .framed_dashed_btn[disabled], .framed_rounded_btn[disabled]{
     --border-color:     var(--disabled_color);
     --font-color:       var(--disabled_color);
 }

@@ -1,4 +1,4 @@
-.minimalInput{
+.minimal_input{
     --color:            var(--txt_color);
     --border:           none;
     --background:       none;
@@ -13,17 +13,17 @@
     font-size:      var(--font-size);
     border-bottom:  var(--border-bottom);
 }
-.minimalInput:focus{outline: none;}
-.minimalInput:hover{
+.minimal_input:focus{outline: none;}
+.minimal_input:hover{
     --border-bottom:    2px solid var(--accent_color);
     border-bottom:      var(--border-bottom);
 }
-.minimalInput[type=text]:focus{
+.minimal_input[type=text]:focus{
     --color:    var(--accent_color);
     color:      var(--color);
 }
 
-.discreteInput{
+.discrete_input{
     --color:            var(--txt_color);
     --border:           none;
     --background:       none;
@@ -40,7 +40,7 @@
     border-bottom:  var(--border-bottom);
 }
 
-.discreteInput:hover, .discreteInput:active{
+.discrete_input:hover, .discreteInput:active{
     --padding-x: 15px;
     padding-left: var(--padding-x);
     padding-right: var(--padding-x);

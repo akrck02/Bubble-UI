@@ -1,5 +1,5 @@
 /*INPUTS*/
-.userInput{
+.user_input{
     --background:   var(--b2);
     --padding:      var(--pd_btn);
     --radius:       var(--radius);
@@ -15,13 +15,13 @@
     color:          var(--color);
 }
 
-.userInput:focus{
+.user_input:focus{
     --new_padding:      15px;
     padding-left:   var(--new_padding);
     padding-right:  var(--new_padding);
 }
 
-.userInputError{
+.user_input.error{
     --background:   var(--b2);
     --padding:      var(--pd_btn);
     --radius:       var(--radius);

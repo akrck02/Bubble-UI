@@ -1,4 +1,4 @@
-.iconActionBtn{
+.icon_action_btn{
     --background:   var(--accent_color);
     --border:       none;
     --size:         100%;
@@ -16,11 +16,11 @@
     cursor:         pointer;
 }
 
-.iconActionBtn img{
+.icon_action_btn img{
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-.iconActionBtn:hover{transform: scale(1.1);}
-.iconActionBtn:active{transform:scale(.95) translateY(3px);}
+.icon_action_btn:hover{transform: scale(1.1);}
+.icon_action_btn:active{transform:scale(.95) translateY(3px);}

@@ -1,5 +1,5 @@
 /*BUTTONS*/
-.minimalBtn{
+.minimal_btn{
     --color:        var(--accent_color);
     --radius:       var(--radius);
     --padding:      var(--pd_btn);
@@ -19,4 +19,4 @@
     background:         var(--background);
     cursor:             pointer;
 }
-.minimalBtn:hover, .minimalBtn:active{transform: scale(.95);}
+.minimal_btn:hover, .minimal_btn:active{transform: scale(.95);}
