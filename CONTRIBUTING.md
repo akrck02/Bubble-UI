@@ -1,11 +1,11 @@
-<h1>Akstrap is a modular open source css framework.</h1>
+<h1>Bubble is a modular open source UI design system.</h1>
 
 _You can contribute to this proyect in many different ways:_
 
 <h2> 1 - Releasing new modules:</h2>
 
 <p>
-  To develop new Akstrap modules you must use the basic structure guideline explained in the VERSION.md file.
+  To develop new Bubble modules you must use the basic structure guideline explained in the VERSION.md file.
   We use a variable system just to make the work easy, that's why new modules have to use them.
 </p>
 
@@ -16,7 +16,7 @@ _You can contribute to this proyect in many different ways:_
   **The version file have the following structure:**
   <pre>
     {
-        akstrap_version: "1.0",
+        bubble_version: "1.0",
         name : "new_module",
         version: "1.0",
         author: "author",
@@ -25,7 +25,7 @@ _You can contribute to this proyect in many different ways:_
     }
   </pre>
   
-  The modules will be check by Akstrap team and uploaded to the official server.
+  The modules will be check by Bubble team and uploaded to the official server.
  </p>
  
 <h3> 1.2 - Testing module issues</h3>
@@ -36,7 +36,7 @@ _You can contribute to this proyect in many different ways:_
 
 <h2> 2 - Sharing this proyect</h2>
 <p>
-Akstrap is a community toolkit for web development. We made it open source to make sure that all the code is always public and visible, 
+Bubble is a community toolkit for web development. We made it open source to make sure that all the code is always public and visible, 
 that's why sharing the code to new and experienced developers its so important for our team. 
 </p>
 
