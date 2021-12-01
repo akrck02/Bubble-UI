@@ -23,17 +23,3 @@
 > Bubble was build to be scalable and our first choise <br>
 > was to make it modular to easy develop new components  <br>
 > and ony import that ones u need. <br>
-
-## Javascript.
-> Javascript is important party of this project. <br>
-> Brings life to the UI and adds amazing features.
-
-## LSS (?)
-> Bubble was originally developed in vanilla CSS. <br>
-> We move the development to LSS to make things easier <br>
-> you can still use CSS to develop modules. <br>
-
-`
-We recommend you to develop modules in LSS,
-it just compiles css to make lightweight distros of Bubble
-`
