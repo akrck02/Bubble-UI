@@ -1,0 +1,50 @@
+
+.text-accent {
+    color: var(--accent-color);
+}
+.text-success {
+    color: var(--success-color);
+}
+.text-error {
+    color: var(--error-color);
+}
+.text-info {
+    color: var(--info-color);
+}
+.text-warning {
+    color: var(--warning-color);
+}
+.text-disabled {
+    color: var(--disabled-color);
+}
+.text-light {
+    color: var(--light-color);
+}
+.text-dark {
+    color: var(--dark-color);
+}
+
+.background-accent {
+    background: var(--accent-color);
+}
+.background-success {
+    background: var(--success-color);
+}
+.background-error {
+    background: var(--error-color);
+}
+.background-info {
+    background: var(--info-color);
+}
+.background-warning {
+    background: var(--warning-color);
+}
+.background-disabled {
+    background: var(--disabled-color);
+}
+.background-light {
+    background: var(--light-color);
+}
+.backgorund-dark {
+    background: var(--dark-color);
+}

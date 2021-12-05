@@ -5,7 +5,7 @@ _You can contribute to this proyect in many different ways:_
 <h2> 1 - Releasing new modules:</h2>
 
 <p>
-  To develop new Bubble modules you must use the basic structure guideline explained in the VERSION.md file.
+  To develop new Bubble modules you must use the basic structure guideline explained in this file.
   We use a variable system just to make the work easy, that's why new modules have to use them.
 </p>
 
@@ -16,7 +16,7 @@ _You can contribute to this proyect in many different ways:_
   **The version file have the following structure:**
   <pre>
     {
-        bubble_version: "1.0",
+        bubble: "1.0",
         name : "new_module",
         version: "1.0",
         author: "author",
