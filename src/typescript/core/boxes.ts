@@ -1,4 +1,4 @@
-export enum CLASSES {
+export enum BOXES {
     BOX_CENTER = "box-center",
     BOX_X_CENTER = "box-x-center",
     BOX_X_START = "box-x-start",
