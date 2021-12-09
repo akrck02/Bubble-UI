@@ -1,13 +1,18 @@
+/*
+    General variables of the framework
+*/
 :root{
     --background:                  #fafafa;  
     --background-alternative:      #f7f7f7;
     --menu:                        #fff;
+    --contrast:                    #f1f1f1;
    
     --font:                 'Roboto light', sans-serif;
     --font-light:           'Roboto thin', sans-serif;
     --font-title:            'Roboto', sans-serif;
     --font-console:          'Ubuntu Mono', monospace;
 
+    --accent-color:         #1e90ff;
     --text-color:            #404040;
     --error-color:          #EB5757;
     --success-color:        #00C851;
@@ -17,8 +22,9 @@
     --dark-color:           #101010;
     --light-color:          #fafafa; 
 
-    --RGB-background:             250,250,250;    
-    --RGB-text-color:            64,64,64;
+    --RGB-background:             250,250,250;  
+    --RGB-accent-color:         30,144,255;  
+    --RGB-text-color:           64,64,64;
     --RGB-error-color:          235,87,87; 
     --RGB-success-color:        0,200,81;
     --RGB-warning-color:        255,187,51;
@@ -27,14 +33,16 @@
     --RGB-light-color:          250,250,250;    
     --RGB-dark-color:           16,16,16;    
 
-    --accent-color:         #1e90ff;
-    --RGB-accent-color:       30,144,255;
-
     --default-box-shadow:           0px 2px 4px rgba(0,0,0,.15);
-    --default-border-radius:        3px;
+    --default-border-radius:        .35rem;
     --default_padding:              10px;
     --default-margin:               10px;
     --default-outline:              .5px solid lightgray;
+
+    --fast : .25s;
+    --medium : .5s;
+    --slow : .75s;
+    --super-slow : 1s;
     
     margin:                         0; 
     padding:                        0;
@@ -42,12 +50,36 @@
     -webkit-tap-highlight-color:    transparent;
 }
 
-html[data-theme = "dark"]{
+/*
+    Dark Theme override
+*/
+@media(prefers-color-scheme: dark){
+    :root{
+        --background:                   #202020;
+        --background-alternative:       #151515;
+        --menu:                         #242424;
+        --contrast:                     #303030;
+    
+        --text-color:                 #eaeaea;
+        --default-box-shadow:           0px 2px 4px rgba(0,0,0,.15);
+        --default-outline:              .5px solid #161616;
+    }
+}
+
+:root[data-theme="dark"]{
     --background:                   #202020;
     --background-alternative:       #151515;
     --menu:                         #242424;
+    --contrast:                     #303030;
 
-    --text-color:          #eaeaea;
+    --text-color:                 #eaeaea;
     --default-box-shadow:           0px 2px 4px rgba(0,0,0,.15);
     --default-outline:              .5px solid #161616;
+}
+
+/*
+    Accessibility feature for reduced motion
+*/
+@media (prefers-reduced-motion) {
+    /* TODO Standard reduced motion*/   
 }
