@@ -1,0 +1,102 @@
+/*
+*   HTML input set
+*/
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=tel],
+input[type=number],
+input[type=search],
+input[type=date] {
+    --local-background: rgba(0, 0, 0, .025);
+
+    width: 100%;
+    padding: 6px;
+    border: none;
+    background: var(--local-background);
+    border-radius: var(--default-border-radius);
+    color: var(--text-color);
+}
+
+input[type=text].error:focus,
+input[type=password].error:focus,
+input[type=email].error:focus,
+input[type=url].error:focus,
+input[type=tel].error:focus,
+input[type=number].error:focus,
+input[type=search].error:focus,
+input[type=date].error:focus,
+textarea.error:focus {
+    outline: 2px solid transparent;
+}
+
+
+:root[data-theme=dark] input[type=text],
+:root[data-theme="dark"] input[type=password],
+:root[data-theme="dark"] input[type=email],
+:root[data-theme="dark"] input[type=url],
+:root[data-theme="dark"] input[type=tel],
+:root[data-theme="dark"] input[type=number],
+:root[data-theme="dark"] input[type=search],
+:root[data-theme="dark"] input[type=date] {
+    --local-background: rgba(255, 255, 255, .05);
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=tel]:focus,
+input[type=number]:focus,
+input[type=search]:focus,
+input[type=date]:focus,
+textarea:focus {
+    transition: .5s;
+    outline: 2px solid var(--accent-color);
+}
+
+/*
+*   Textarea 
+*/
+textarea {
+    --local-background: rgba(0, 0, 0, .025);
+
+    padding: 6px;
+    border: none;
+    background: var(--local-background);
+    border-radius: var(--default-border-radius);
+    color: var(--text-color);
+    resize: none;
+}
+
+
+@media (prefers-color-scheme : dark) {
+
+    input[type=text],
+    input[type=password],
+    input[type=email],
+    input[type=url],
+    input[type=tel],
+    input[type=number],
+    input[type=search],
+    input[type=date],
+    textarea {
+        --local-background: rgba(255, 255, 255, .05);
+    }
+}
+
+/**
+*   Error handle
+*/
+
+input,
+textarea {
+    outline: 2px solid transparent;
+    backdrop-filter: blur(10px);
+}
+
+input.error,
+textarea.error {
+    border: 2px solid var(--error-color);
+}

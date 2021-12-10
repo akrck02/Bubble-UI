@@ -1,0 +1,25 @@
+button, input[type=submit] {
+    border: 0;
+    margin: 10px;
+    padding: 7px;
+    box-shadow: var(--default-box-shadow);
+    border-radius: var(--default-border-radius);
+    background: var(--contrast);
+    color: var(--text-color);
+    cursor: pointer;
+    transition-property: color, background;
+    transition-duration: var(--medium);
+}
+
+button:hover, button:focus, input[type=submit]:hover, input[type=submit]:focus {
+    background: var(--accent-color);
+    color: white;
+   
+}
+
+button[disabled] , input[type=submit][disabled] {
+    background: var(--disabled-color);
+    color: inherit;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
