@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/master.css">
+    <title>Test - navbar</title>
+    <style>
+        view {
+            overflow: hidden;   
+            padding: 20px;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .material-nav.row {
+            margin: 0;
+        }
+
+        .material-nav .column {
+            padding: 10px;
+        }
+
+        .row {
+            margin: 7px 0px;
+        }
+    </style>
+</head>
+<body class="box-column">
+    <nav class="material-nav row">
+        <div class="column">
+            <b>Mylogo.com</b>
+        </div>
+        <ul class="column box-x-end">
+            <li class="tab">Home</li>
+            <li class="tab">About</li>
+        </ul>
+    </nav>
+    <view>
+        <div class="row">
+            <h1>Fill this form:</h1>
+        </div><br>
+        <div class="row">
+            <label class="switch no-copy">
+                <input type="checkbox" onchange="change()"/>
+                <span class="switch-toggle"></span>
+                <span class="title">Dark mode </span>
+              </label>
+        </div>
+        <div class="row">
+            <label class="switch no-copy">
+                <input type="checkbox" />
+                <span class="switch-toggle"></span>
+                <span class="title">Transitions</span>
+              </label>
+        </div>
+    </view>
+</body>
+<script>
+    function change(){
+        const data = document.documentElement.dataset
+        data.theme = data.theme != "light" ? "light" : "dark";
+    }
+</script>
+</html>

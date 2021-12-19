@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../src/css/master.css" />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <title>Test - navbar</title>
+        <style>
+           /*
+            body {
+                background: url(
+                    https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?cs=srgb&dl=pexels-vlad-alexandru-popa-1402787.jpg&fm=jpg
+                );
+                background-size: cover;
+            }
+            */
+
+            view {
+                overflow: hidden;
+                padding: 20px;
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            .material-nav.row {
+                margin: 0;
+            }
+
+            .material-nav .column {
+                padding: 10px;
+            }
+
+            .row {
+                margin: 7px 0px;
+            }
+        </style>
+    </head>
+    <body class="box-column">
+        <nav class="material-nav row no-copy">
+            <div class="column">
+                <b>Mylogo.com</b>
+            </div>
+            <ul class="column box-x-end">
+                <li class="icon-tab selected" tabindex="0">
+                    <a href="#Home" tabindex="-1">
+                        <i class="material-icons">home</i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="icon-tab" role="tab" tabindex="0">
+                    <a href="#Security" tabindex="-1">
+                        <i class="material-icons">verified_user</i>
+                        <span>Security</span>
+                    </a>
+                </li>
+                <li class="icon-tab" role="tab" tabindex="0">
+                    <a href="#Code" tabindex="-1">
+                        <i class="material-icons">code</i>
+                        <span>Code</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="breadcrumb">
+            <li>Code</li>
+            <li>project</li>
+            <li>BubbleUI</li>
+        </nav>
+        <view>
+            <div class="context">
+                <!-- <h1 class="title">Web menu</h1> -->
+                <ul>
+                    <li><i class="material-icons">content_copy</i><span>Copy</span></li>
+                </ul>
+
+                <span class="separator"></span>
+                <ul>
+                    <li><i class="material-icons">content_cut</i><span>Cut</span></li>
+                    <li><i class="material-icons">content_paste</i><span>Paste</span></li>
+                </ul>
+            </div>
+        </view>
+    </body>
+    <script>
+        const tabs = document.querySelectorAll(".material-nav .icon-tab");
+
+        function selectTab(tab) {
+            tabs.forEach((tab) => tab.classList.remove("selected"));
+            tab.classList.add("selected");
+        }
+
+        tabs.forEach((tab) => {
+            tab.addEventListener("click", (e) => {
+                selectTab(tab);
+            });
+
+            tab.addEventListener("focus", (e) => selectTab(tab));
+        });
+    </script>
+</html>

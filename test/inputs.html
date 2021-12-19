@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/master.css">
+    <title>Test - inputs</title>
+    <style>
+        view {
+            overflow: hidden;   
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .test-label {
+            margin: 10px 0px;   
+        }
+
+        .test-label-title {
+            display: block; 
+            padding: 10px 0px;
+        }
+    </style>
+</head>
+<body class="box-column box-x-center box-y-center">
+    <view class="box-column box-x-start box-y-start">
+        <h1>Inputs</h1>
+        <label class="test-label">
+            <span class="test-label-title">Name:</span>
+            <input type="text">
+        </label>
+        <label class="test-label">
+            <span class="test-label-title">Date:</span>
+            <input type="date">
+        </label>
+        <textarea placeholder="Write your comments here..." cols="30" rows="10">
+    
+        </textarea>
+        <div class="box-row">
+            <button disabled>Click</button>
+            <input type="submit" value="submit">
+            <button>Restore</button>
+        </div>
+       
+    </view>
+</body>
+</html>
