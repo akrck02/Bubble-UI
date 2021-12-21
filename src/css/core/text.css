@@ -14,11 +14,11 @@
     text-align: justify;
 }
 
-.bold {
+.bold , b, strong {
     font-weight: bold;
 }
 
-.italic {
+.italic, i, em {
     font-style: italic;
 }
 
