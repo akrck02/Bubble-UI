@@ -25,7 +25,7 @@ jobs:
       run: npm run build
 
     - name: rename build
-      run: mv BubbleUI.css BubbleUI-v${{ steps.version.outputs.version }}.css
+      run: mv dist/BubbleUI.css dist/BubbleUI-v${{ steps.version.outputs.version }}.css
 
     - name: Create a Release of commit
       uses: "marvinpinto/action-automatic-releases@latest"
