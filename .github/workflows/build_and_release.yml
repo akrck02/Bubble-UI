@@ -18,11 +18,14 @@ jobs:
       id: version
 
     - name : version name
-      run: echo "::set-output name=version::$(node version.js true)" 
+      run: echo "::set-output name=version-name::$(node version.js true)" 
       id: version-name
 
     - name: build
       run: npm run build
+
+    - name: rename build
+      run: mv BubbleUI.css BubbleUI-v${{ steps.version.outputs.version }}.css
 
     - name: Create a Release of commit
       uses: "marvinpinto/action-automatic-releases@latest"
