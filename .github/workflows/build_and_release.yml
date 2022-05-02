@@ -33,7 +33,7 @@ jobs:
         repo_token: ${{ github.token }}
         automatic_release_tag: v${{ steps.version.outputs.version }}
         prerelease: false
-        title: ${{ steps.version.outputs.version }} - ${{ steps.version.outputs.version-name }}
+        title: ${{ steps.version.outputs.version }} - ${{ steps.version-name.outputs.version-name }}
         files: |
           LICENSE
           dist/*.css
