@@ -1,22 +1,21 @@
 {
   "name": "bubble_ui",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "<img src='./Bubble_banner.png' style='width:80%;max-width:400px;'/>",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "compile": "tsc",
-    "watch": "tsc -w"
+    "build": "java -jar lit-v1.0b2.jar"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/akrck02/Bubble_UI.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "akrck02",
+  "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/akrck02/Bubble_UI/issues"
   },

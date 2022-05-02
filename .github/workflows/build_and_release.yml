@@ -1,0 +1,36 @@
+name: Stable release
+on:
+  push:
+    branches: [ latest ]
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - run: npm install
+
+    - name : version
+      run: echo "::set-output name=version::$(node version.js)" 
+      id: version
+
+    - name : version name
+      run: echo "::set-output name=version::$(node version.js true)" 
+      id: version-name
+
+    - name: build
+      run: npm run build
+
+    - name: Create a Release of commit
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: ${{ github.token }}
+        automatic_release_tag: v${{ steps.version.outputs.version }}
+        prerelease: false
+        title: ${{ steps.version.outputs.version }} - ${{ steps.version.outputs.version-name }}
+        files: |
+          LICENSE
+          dist/*.css
