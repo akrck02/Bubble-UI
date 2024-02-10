@@ -1,0 +1,18 @@
+button {
+    padding: .65rem 1rem;
+    border-radius: .65rem;
+    box-shadow: none;
+    background: #282828;
+    transition: transform var(--fast);
+}
+
+button:hover, 
+button:focus, 
+button:active {
+    background: #303030;
+}
+
+button:active {
+
+    transform: scale(.92);
+}
