@@ -16,8 +16,8 @@ body {
     margin: 0;
     padding: 0;
 
-    background: var(--background);
-    color: var(--text-color);
+    background: var(--background-color);
+    color: var(--on-background-color);
     font-family: var(--font);
 }
 

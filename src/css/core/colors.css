@@ -1,50 +1,54 @@
-
-.text-accent {
-    color: var(--accent-color);
-}
-.text-success {
-    color: var(--success-color);
-}
-.text-error {
-    color: var(--error-color);
-}
-.text-info {
-    color: var(--info-color);
-}
-.text-warning {
-    color: var(--warning-color);
-}
-.text-disabled {
-    color: var(--disabled-color);
-}
-.text-light {
-    color: var(--light-color);
-}
-.text-dark {
-    color: var(--dark-color);
+:root[data-bubble=material] * {
+    color: var(--on-background-color);
 }
 
-.background-accent {
-    background: var(--accent-color);
+:root[data-bubble=material] .primary {
+    background: var(--primary-color);
+    color: var(--on-primary-color);
 }
-.background-success {
-    background: var(--success-color);
+
+:root[data-bubble=material] .primary-container {
+    border-radius: 1rem;
+    background: var(--primary-container-color);
+    color: var(--on-primary-container-color);
 }
-.background-error {
+
+:root[data-bubble=material] .secondary {
+    background: var(--secondary-color);
+    color: var(--on-secondary-color);
+}
+
+:root[data-bubble=material] .secondary-container {
+    border-radius: 1rem;
+    background: var(--secondary-container-color);
+    color: var(--on-secondary-container-color);
+}
+
+:root[data-bubble=material] .tertiary {
+    background: var(--tertiary-color);
+    color: var(--on-tertiary-color);
+}
+
+:root[data-bubble=material] .tertiary-container {
+    border-radius: 1rem;
+    background: var(--tertiary-container-color);
+    color: var(--on-tertiary-container-color);
+}
+
+:root[data-bubble=material] .error {
     background: var(--error-color);
+    color: var(--on-error-color);
 }
-.background-info {
-    background: var(--info-color);
+
+:root[data-bubble=material] .error-container {
+    border-radius: 1rem;
+    background: var(--error-container-color);
+    color: var(--on-error-container-color);
 }
-.background-warning {
-    background: var(--warning-color);
-}
-.background-disabled {
-    background: var(--disabled-color);
-}
-.background-light {
-    background: var(--light-color);
-}
-.backgorund-dark {
-    background: var(--dark-color);
+
+
+:root[data-bubble=material] .surface {
+    background: var(--surface-color);
+    color: var(--on-surface-color);
+    border-radius: 1rem;
 }

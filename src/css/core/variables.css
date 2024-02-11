@@ -2,51 +2,44 @@
     General variables of the framework
 */
 :root {
-
-    --font:                 'Roboto light', sans-serif;
-    --font-light:           'Roboto thin', sans-serif;
-    --font-title:           'Roboto', sans-serif;
+    
+    --font:                 'Open Sans', sans-serif;
+    --font-light:           'Open Sans light', sans-serif;
+    --font-title:           'Open Sans', sans-serif;
     --font-console:         'Ubuntu Mono', monospace;
 
-    --RGB-background:               250, 250, 250;
-    --RGB-background-alternative:   247, 247, 247;
-    --RGB-menu:                     255, 255, 255;
-    --RGB-contrast:                 241, 241, 241;
+    --animation-fast:         .25s;
+    --animation-medium:       .5s;
+    --animation-slow:         .75s;
+    --animation-super-slow:   1s;
 
-    --RGB-accent-color:     30, 144, 255;
-    --RGB-text-color:       64, 64, 64;
-    --RGB-error-color:      235, 87, 87;
-    --RGB-success-color:    0, 200, 81;
-    --RGB-warning-color:    255, 187, 51;
-    --RGB-info-color:       91, 192, 222;
-    --RGB-disabled-color:   170, 170, 170;
-    --RGB-light-color:      250, 250, 250;
-    --RGB-dark-color:       16, 16, 16;
-   
-    --background:               rgb(var(--RGB-background));
-    --background-alternative:   rgb(var(--RGB-background-alternative));
-    --menu:                     rgb(var(--RGB-menu));
-    --contrast:                 rgb(var(--RGB-contrast));
-    --accent-color:             rgb(var(--RGB-accent-color));
-    --text-color:               rgb(var(--RGB-text-color));
-    --error-color:              rgb(var(--RGB-error-color));
-    --success-color:            rgb(var(--RGB-success-color));
-    --warning-color:            rgb(var(--RGB-warning-color));
-    --info-color:               rgb(var(--RGB-info-color));
-    --disabled-color:           rgb(var(--RGB-disabled-color));
-    --dark-color:               rgb(var(--RGB-dark-color));
-    --light-color:              rgb(var(--RGB-light-color));
+    --primary-color:                #4A5C92;
+    --on-primary-color:             #FFFFFF;
+    --primary-container-color:      #DBE1FF;
+    --on-primary-container-color:   #00174B;
 
-    --default-box-shadow:       0px 2px 4px rgba(0, 0, 0, .15);
-    --default-border-radius:    .35rem;
-    --default-padding:          10px;
-    --default-margin:           10px;
-    --default-outline:          .5px solid lightgray;
+    --secondary-color:              #585E72;
+    --on-secondary-color:           #FFFFFF;
+    --secondary-container-color:    #EEEDF4;
+    --on-secondary-container-color: #161B2C;
 
-    --fast:         .25s;
-    --medium:       .5s;
-    --slow:         .75s;
-    --super-slow:   1s;
+    --tertiary-color:               #745471;
+    --on-tertiary-color:            #FFFFFF;
+    --tertiary-container-color:     #E3E2E9;
+    --on-tertiary-container-color:  #2B122B;
+
+    --error-color:                  #BA1A1A;
+    --on-error-color:               #FFFFFF;
+    --error-container-color:        #FFDAD6;
+    --on-error-container-color:     #410002;
+
+    --background-color:             #FAF8FF;
+    --on-background-color:          #1A1B21;
+    --surface-color:                #FAF8FF;
+    --on-surface-color:             #1A1B21;
+
+    --item-background-color:        #ffffff;
+    --on-item-background-color:     #000;
 
     margin:     0;
     padding:    0;
@@ -54,33 +47,100 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-/*
-    Dark Theme override
-*/
-@media(prefers-color-scheme: dark) {
-    :root {
-        --RGB-background:               32, 32, 32;
-        --RGB-background-alternative:   21, 21, 21;
-        --RGB-menu:                     36, 36, 36;
-        --RGB-contrast:                 48, 48, 48;
-        --RGB-text-color:               234, 234, 234;
-        --RGB-disabled-color:           16, 16, 16;
+:root[data-theme=light-you]{
 
-        --default-box-shadow:       0px 2px 4px rgba(0, 0, 0, .15);
-        --default-outline:          .5px solid #161616;
-    }
+    --primary-color:                #4A5C92;
+    --on-primary-color:             #FFFFFF;
+    --primary-container-color:      #DBE1FF;
+    --on-primary-container-color:   #00174B;
+
+    --secondary-color:              #585E72;
+    --on-secondary-color:           #FFFFFF;
+    --secondary-container-color:    #EEEDF4;
+    --on-secondary-container-color: #161B2C;
+
+    --tertiary-color:               #745471;
+    --on-tertiary-color:            #FFFFFF;
+    --tertiary-container-color:     #E3E2E9;
+    --on-tertiary-container-color:  #2B122B;
+
+    --error-color:                  #BA1A1A;
+    --on-error-color:               #FFFFFF;
+    --error-container-color:        #FFDAD6;
+    --on-error-container-color:     #410002;
+
+    --background-color:             #FAF8FF;
+    --on-background-color:          #1A1B21;
+    --surface-color:                #FAF8FF;
+    --on-surface-color:             #1A1B21;
+
+    --item-background-color:        #ffffff;
+    --on-item-background-color:     #000;
+    
 }
 
-:root[data-theme="dark"] {
-    --RGB-background:               32, 32, 32;
-    --RGB-background-alternative:   21, 21, 21;
-    --RGB-menu:                     36, 36, 36;
-    --RGB-contrast:                 48, 48, 48;
-    --RGB-text-color:               234, 234, 234;
-    --RGB-disabled-color:           16, 16, 16;
-    
-    --default-box-shadow:       0px 2px 4px rgba(0, 0, 0, .15);
-    --default-outline:          .5px solid #161616;
+:root[data-theme=dark] {
+
+    --primary-color:                #B4C5FF;
+    --on-primary-color:             #1A2E60;
+    --primary-container-color:      #121318;
+    --on-primary-container-color:   #DBE1FF;
+
+    --secondary-color:              #C1C6DD;
+    --on-secondary-color:           #2A3042;
+    --secondary-container-color:    #1A1B21;
+    --on-secondary-container-color: #DDE1F9;
+
+    --tertiary-color:               #E2BBDC;
+    --on-tertiary-color:            #422741;
+    --tertiary-container-color:     #292A2F;
+    --on-tertiary-container-color:  #FFD6F8;
+
+    --error-color:                  #BA1A1A;
+    --on-error-color:               #FFFFFF;
+    --error-container-color:        #FFDAD6;
+    --on-error-container-color:     #410002;
+
+    --background-color:             #121318;
+    --on-background-color:          #EEEEEE;
+    --surface-color:                #121318;
+    --on-surface-color:             #EEEEEE;
+
+    --item-background-color:        #33343A;
+    --on-item-background-color:     #E3E2E9;
+
+}
+
+:root[data-theme=dark-contrast] {
+
+    --primary-color:                #B4C5FF;
+    --on-primary-color:             #1A2E60;
+    --primary-container-color:      #222222;
+    --on-primary-container-color:   #DBE1FF;
+
+    --secondary-color:              #C1C6DD;
+    --on-secondary-color:           #2A3042;
+    --secondary-container-color:    #2D2D2D;
+    --on-secondary-container-color: #DDE1F9;
+
+    --tertiary-color:               #E2BBDC;
+    --on-tertiary-color:            #422741;
+    --tertiary-container-color:     #444444;
+    --on-tertiary-container-color:  #FFD6F8;
+
+    --error-color:                  #BA1A1A;
+    --on-error-color:               #FFFFFF;
+    --error-container-color:        #FFDAD6;
+    --on-error-container-color:     #410002;
+
+    --background-color:             #1A1A1A;
+    --on-background-color:          #EEEEEE;
+    --surface-color:                #1A1A1A;
+    --on-surface-color:             #EEEEEE;
+
+    --item-background-color:        #2D2D2D;
+    --on-item-background-color:     #E3E2E9;
+
 }
 
 /*
