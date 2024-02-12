@@ -1,0 +1,29 @@
+:root[data-bubble=material] h1 {
+    font-size: 2rem;
+    margin: 1rem 1rem;
+}
+
+:root[data-bubble=material] h2 {
+    font-size: 1.8rem;
+    margin: 1rem 1rem;
+}
+
+:root[data-bubble=material] h3 {
+    font-size: 1.6rem;
+    margin: 1rem 1rem;
+}
+
+:root[data-bubble=material] h4 {
+    font-size: 1.4rem;
+    margin: 1rem 1rem;
+}
+
+:root[data-bubble=material] h5 {
+    font-size: 1.2rem;
+    margin: 1rem 1rem;
+}
+
+:root[data-bubble=material] h6 {
+    font-size: 1rem;
+    margin: 1rem 1rem;
+}

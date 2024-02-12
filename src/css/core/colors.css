@@ -7,6 +7,7 @@
     color: var(--on-primary-color);
 }
 
+
 :root[data-bubble=material] .primary-container {
     border-radius: 1rem;
     background: var(--primary-container-color);
@@ -45,7 +46,6 @@
     background: var(--error-container-color);
     color: var(--on-error-container-color);
 }
-
 
 :root[data-bubble=material] .surface {
     background: var(--surface-color);
