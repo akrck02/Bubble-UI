@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light-you" data-bubble="material">
+<html lang="en" data-theme="light" data-bubble="material">
 
 <head>
     <meta charset="UTF-8">
@@ -113,12 +113,31 @@
     }
 
     div.nav-bar div.button-group button span {
-        font-size: .95rem;
+        font-size: 1.1rem;
     }
 
     div.nav-bar div.button-group label {
         font-size: .65rem;
         text-align: center;
+    }
+
+    div.nav-bar div.separator {
+        width: 3.2rem;
+    }
+
+    :root[data-bubble=material] button.new-mail {
+        position: fixed;
+        bottom: 2.75rem;
+        right: calc(50% - 2.5rem);
+
+        width: 4rem;
+        height: 4rem;
+        box-shadow: 0rem -.2rem .3rem rgba(0,0,0, .1);
+        z-index:2;
+    }
+
+    :root[data-bubble=material] button.new-mail span{
+        color: var(--on-primary-color);
     }
 
 </style>
@@ -243,6 +262,10 @@
         </div>
     </div>
 
+    <button class="new-mail primary">
+        <span class="material-symbols-outlined">edit</span>
+    </button>
+
     <div class="nav-bar box-row box-center secondary-container">
         <div class="box-column button-group">
             <button id="inbox">
@@ -252,21 +275,23 @@
         </div>
         <div class="box-column button-group">
             <button id="inbox">
-                <span class="material-symbols-outlined">all_inbox</span>
+                <span class="material-symbols-outlined">group</span>
             </button>
-            <label for="inbox">inbox</label>
+            <label for="group">groups</label>
         </div>
+        <div class="separator"></div>
+
         <div class="box-column button-group">
             <button id="inbox">
-                <span class="material-symbols-outlined">all_inbox</span>
+                <span class="material-symbols-outlined">chat</span>
             </button>
-            <label for="inbox">inbox</label>
+            <label for="chat">chat</label>
         </div>
         <div class="box-column button-group">
-            <button id="inbox">
-                <span class="material-symbols-outlined">all_inbox</span>
+            <button id="account_circle">
+                <span class="material-symbols-outlined">account_circle</span>
             </button>
-            <label for="inbox">inbox</label>
+            <label for="account_circle">inbox</label>
         </div>
     </div>
 

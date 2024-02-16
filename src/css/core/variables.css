@@ -15,17 +15,17 @@
 
     --primary-color:                #4A5C92;
     --on-primary-color:             #FFFFFF;
-    --primary-container-color:      #f4f4f4;
+    --primary-container-color:      #fCfCfC;
     --on-primary-container-color:   #00174B;
 
     --secondary-color:              #585E72;
     --on-secondary-color:           #FFFFFF;
-    --secondary-container-color:    #EEEEEE;
+    --secondary-container-color:    #F4F4F4;
     --on-secondary-container-color: #161B2C;
 
     --tertiary-color:               #745471;
     --on-tertiary-color:            #FFFFFF;
-    --tertiary-container-color:     #E3E3E3;
+    --tertiary-container-color:     #ebebeb;
     --on-tertiary-container-color:  #2B122B;
 
     --error-color:                  #BA1A1A;
@@ -33,12 +33,12 @@
     --error-container-color:        #FFDAD6;
     --on-error-container-color:     #410002;
 
-    --background-color:             #fafafa;
+    --background-color:             #f4f4f4;
     --on-background-color:          #1A1B21;
-    --surface-color:                #fafafa;
+    --surface-color:                #f4f4f4;
     --on-surface-color:             #1A1B21;
 
-    --item-background-color:        #fafafa;
+    --item-background-color:        #f4f4f4;
     --on-item-background-color:     #000;
 
     margin:     0;
