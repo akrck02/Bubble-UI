@@ -205,7 +205,7 @@
             const g = color[1];
             const b = color[2];
 
-            if(isDark) {
+            // if(isDark) {
 
                 const rd = r / 17
                 const gd = g / 17
@@ -223,26 +223,26 @@
                 console.log(rd, gd, bd);
 
                 return color;
-            } 
+            // } 
 
-            const rd = (255 - r) / 17
-            const gd = (255 - g) / 17
-            const bd = (255 - b) / 17
+            // const rd = (255 - r) / 17
+            // const gd = (255 - g) / 17
+            // const bd = (255 - b) / 17
 
 
-            const min = Math.floor(Math.min(rd,gd,bd))
-            for (let i = 0; i < min; i++) {
-                color = [
-                    color[0] + 17,
-                    color[1] + 17,
-                    color[2] + 17,
-                ]
+            // const min = Math.floor(Math.min(rd,gd,bd))
+            // for (let i = 0; i < min; i++) {
+            //     color = [
+            //         color[0] + 17,
+            //         color[1] + 17,
+            //         color[2] + 17,
+            //     ]
                 
-            }
+            // }
 
-            console.log(rd,gd,bd);
+            // console.log(rd,gd,bd);
 
-            return color;
+            // return color;
         }
     }
 
@@ -313,14 +313,33 @@
 
         const textColor = Colors.rgbToHex(isDarkColor? [255,255,255]:[0,0,0]);
 
-        document.body.style.setProperty("--background-color", Colors.rgbToHex(colors[colors.length-1]));
+        const background = Colors.rgbToHex(colors[colors.length-1]);
+        const onBackground = textColor;
+        
+        const surface1 = Colors.rgbToHex(colors[colors.length-2]);
+        const onSurface1 = textColor;
+
+        const surface2 = Colors.rgbToHex(colors[colors.length-3]);
+        const onSurface2 = textColor;
+
+        const surface3 = Colors.rgbToHex(colors[colors.length-4]);
+        const onSurface3 = textColor;
+
+
+        document.body.style.setProperty("--background-color", background);
         document.body.style.setProperty("--on-background-color", textColor);
 
         //document.body.style.setProperty("--primary-color", Colors.rgbToHex(colors[colors.length-1]));
-        document.body.style.setProperty("--primary-container-color", Colors.rgbToHex(colors[colors.length-2]));
-        document.body.style.setProperty("--secondary-container-color", Colors.rgbToHex(colors[colors.length-3]));
-        document.body.style.setProperty("--tertiary-container-color", Colors.rgbToHex(colors[colors.length-4]));
-        document.body.style.setProperty("--item-background-color", Colors.rgbToHex(colors[colors.length-3]));
+        document.body.style.setProperty("--primary-container-color", surface1);
+        document.body.style.setProperty("--on-primary-container-color", onSurface1);
+
+        document.body.style.setProperty("--secondary-container-color", surface2);
+        document.body.style.setProperty("--on-secondary-container-color", onSurface2);
+
+        document.body.style.setProperty("--tertiary-container-color", surface3);
+        document.body.style.setProperty("--on-tertiary-container-color", onSurface3);
+
+        document.body.style.setProperty("--item-background-color", surface2);
     }
 
     window.onload  = () =>{
