@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark" data-bubble="material">
+<html lang="en" data-theme="dark-you">
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,6 @@
 <style>
     body {
         padding: 1rem;
-        background: var(--background-color);
         transition: background-color var(--animation-fast);
 
         margin-bottom: 5rem;
@@ -23,10 +22,9 @@
         transition: background-color var(--animation-fast);
     }
 
-    .surface,
-    .primary-container,
-    .secondary-container,
-    .tertiary-container,
+    .surface-1,
+    .surface-2,
+    .surface-3,
     .error-container {
         padding: 1rem;
     }
@@ -39,12 +37,12 @@
         width: 100%;
     }
 
-    .primary-container{
+    .surface-1{
         margin-bottom: 2rem;
         margin-top: 1rem;
     }
 
-    .secondary-container {
+    .surface-2 {
         margin-top: 2rem;
     }
 
@@ -93,11 +91,10 @@
         font-size: .85rem;
     }
 
-    :root[data-bubble="material"] div.nav-bar {
+    div.nav-bar {
         position: fixed;
         bottom: 0;
         left: 0;
-        background: var(--secondary-container-color);
         width:100%;
         border-radius: 1.2rem 1.2rem 0rem 0rem;
         padding: 1rem 1rem;
@@ -109,7 +106,7 @@
     div.nav-bar div.button-group button {
         padding: .5rem 1.5rem;
         height: auto;
-        background: var(--tertiary-container-color);
+        background: var(--surface-3);
     }
 
     div.nav-bar div.button-group button span {
@@ -125,7 +122,7 @@
         width: 3.2rem;
     }
 
-    :root[data-bubble=material] button.new-mail {
+    button.new-mail {
         position: fixed;
         bottom: 2.75rem;
         right: calc(50% - 2.5rem);
@@ -136,369 +133,171 @@
         z-index:2;
     }
 
-    :root[data-bubble=material] button.new-mail span{
+    button.new-mail span{
         color: var(--on-primary-color);
     }
 
+    .content {
+        max-width: min(30rem, 100%);
+    }
+    
 </style>
 <script>
-
-    class Colors {
-
-        static hexToRgb(hex) {
-            const hexValue = hex.substring(1)
-            const red = hexValue.substring(0, 2)
-            const green = hexValue.substring(2, 4)
-            const blue = hexValue.substring(4, 6)
-            return [parseInt(red,16), parseInt(green,16), parseInt(blue,16)]
-        }
-
-        static rgbToHex(rgb) {
-            const red = rgb[0].toString(16).padStart(2, '0')
-            const green = rgb[1].toString(16).padStart(2, '0')
-            const blue = rgb[2].toString(16).padStart(2, '0')
-            return `#${red}${green}${blue}`
-        }
-
-        static getNewColor(color, difference, isDark) {
-
-            const newColor = [color[0],color[1],color[2]];
-            if (isDark){
-                newColor[0] += difference
-                newColor[1] += difference
-                newColor[2] += difference
-            } else {
-                newColor[0] -= difference
-                newColor[1] -= difference
-                newColor[2] -= difference
-            }
-
-            return [
-                Colors.getNumberIn0to255Range(newColor[0]),
-                Colors.getNumberIn0to255Range(newColor[1]),
-                Colors.getNumberIn0to255Range(newColor[2]),
-            ]
-        }
-
-        static getNumberIn0to255Range(color) {
-
-            if(color <= 0){
-                return 0;
-            }
-
-            if (color >= 255){
-                return 255;
-            }
-
-            return color;
-        }
-
-        static isDark(color) {
-            return color[0] + color[1] + color[2] < 127 * 3 
-        }
-
-        static normalize(color) {
-
-            const isDark = Colors.isDark(color);
-
-            const r = color[0];
-            const g = color[1];
-            const b = color[2];
-
-            // if(isDark) {
-
-                const rd = r / 17
-                const gd = g / 17
-                const bd = b / 17
-
-                const min = Math.floor(Math.min(rd,gd,bd))
-                for (let i = 0; i < min; i++) {
-                    color = [
-                        color[0] - 17,
-                        color[1] - 17,
-                        color[2] - 17,
-                    ]
-                    
+    document.addEventListener('DOMContentLoaded', () => {
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                let theme = document.documentElement.getAttribute('data-theme');
+                console.log(theme);
+                if (theme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark-you');
+                } 
+                else if (theme === 'dark-you'){
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }                
+                else if (theme === 'light') {
+                    document.documentElement.setAttribute('data-theme', 'light-you');
+                } 
+                else if (theme === 'light-you') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
                 }
-                console.log(rd, gd, bd);
 
-                return color;
-            // } 
-
-            // const rd = (255 - r) / 17
-            // const gd = (255 - g) / 17
-            // const bd = (255 - b) / 17
-
-
-            // const min = Math.floor(Math.min(rd,gd,bd))
-            // for (let i = 0; i < min; i++) {
-            //     color = [
-            //         color[0] + 17,
-            //         color[1] + 17,
-            //         color[2] + 17,
-            //     ]
-                
-            // }
-
-            // console.log(rd,gd,bd);
-
-            // return color;
-        }
-    }
-
-    class ColorExtractor {
-
-        static extractAll(color, isDark, baseChannel, extractedColors = [color]){
-
-            if(baseChannel === undefined) {
-                baseChannel = ColorExtractor.getBaseChannel(color, isDark);
-            }
-
-            const difference = 17;
-
-            switch (baseChannel) {
-                case "R":
-
-                    if((isDark && color[0] >= 255) || (!isDark && color[0] <= 0)) {
-                        return extractedColors;
-                    }
-                    break;
-            
-                case "G":
-
-                    if((isDark && color[1] >= 255) || (!isDark && color[1] <= 0)) {
-                        return extractedColors;
-                    }
-                    break;
-                
-                case "B":
-
-                    if((isDark && color[2] >= 255) || (!isDark && color[2] <= 0)) {
-                        return extractedColors;
-                    }
-                    break;
-
-                default: throw new Error("INVALID BASE CHANNEL ON EXTRACT");
-            }
-
-            color = Colors.getNewColor(color, difference, isDark);
-            extractedColors.push([color[0],color[1],color[2]]);
-            extractedColors = ColorExtractor.extractAll(color, isDark, baseChannel, extractedColors);
-            return extractedColors;
-        }
-
-
-        static getBaseChannel(color, isDark){
-            if (isDark) {
-                const min = Math.min(color[0],color[1],color[2]);
-                switch (min) {
-                    case color[0]: return "R";
-                    case color[1]: return "G";
-                    case color[2]: return "B";
-                    default: throw new Error("IMPOSSIBLE COLOR ON GET BASE CHANNEL");
-                }
-            }
-
-            const max = Math.max(color[0],color[1],color[2]);
-            switch (max) {
-                case color[0]: return "R";
-                case color[1]: return "G";
-                case color[2]: return "B";
-                default: throw new Error("IMPOSSIBLE COLOR ON GET BASE CHANNEL");
-            }
-        }
-    } 
-
-    function applyColorsToBubble(colors, isDarkColor) {
-
-        const textColor = Colors.rgbToHex(isDarkColor? [255,255,255]:[0,0,0]);
-
-        const background = Colors.rgbToHex(colors[colors.length-1]);
-        const onBackground = textColor;
-        
-        const surface1 = Colors.rgbToHex(colors[colors.length-2]);
-        const onSurface1 = textColor;
-
-        const surface2 = Colors.rgbToHex(colors[colors.length-3]);
-        const onSurface2 = textColor;
-
-        const surface3 = Colors.rgbToHex(colors[colors.length-4]);
-        const onSurface3 = textColor;
-
-
-        document.body.style.setProperty("--background-color", background);
-        document.body.style.setProperty("--on-background-color", textColor);
-
-        //document.body.style.setProperty("--primary-color", Colors.rgbToHex(colors[colors.length-1]));
-        document.body.style.setProperty("--primary-container-color", surface1);
-        document.body.style.setProperty("--on-primary-container-color", onSurface1);
-
-        document.body.style.setProperty("--secondary-container-color", surface2);
-        document.body.style.setProperty("--on-secondary-container-color", onSurface2);
-
-        document.body.style.setProperty("--tertiary-container-color", surface3);
-        document.body.style.setProperty("--on-tertiary-container-color", onSurface3);
-
-        document.body.style.setProperty("--item-background-color", surface2);
-    }
-
-    window.onload  = () =>{
-        //setTimeout(() => window.location.reload(1), 5000);
-
-        const colorInput = document.getElementById("color-picker");
-        colorInput.oninput = (e) => {
-            const baseColor = Colors.normalize(Colors.hexToRgb(colorInput.value));
-            const isDarkColor = Colors.isDark(baseColor);
-
-            console.log("BASE COLOR:",baseColor);
-            console.log("DARK COLOR:",isDarkColor);
-
-            let colors = ColorExtractor.extractAll(baseColor,isDarkColor);
-            
-            // reverse the colors array
-            console.log(colors);
-            colors.reverse();
-
-            applyColorsToBubble(colors,isDarkColor);
-        }
-
-    }
-
+            });
+        });
+    });
 </script>
-<body class="box-column">
 
-    <input id="color-picker" type="color"/>
-
-    <div class="card primary-container box-column">
-        <div class="box-row box-y-center box-x-between">
-            <div class="user box-row box-y-center">
-                <img class="user-profile-pic" src="./resources/photo.jpg" alt="akrck02" >
-                <div class="msg-info box-column">
-                    <p class="username">Akrck02 lol</p>
-                    <p class="date">4 min ago</p>
+<body class="box-column box-y-center">
+    <div class="box-column content">
+        <div class="card surface-1 box-column">
+            <div class="box-row box-y-center box-x-between">
+                <div class="user box-row box-y-center">
+                    <img class="user-profile-pic" src="./resources/photo.jpg" alt="akrck02" >
+                    <div class="msg-info box-column">
+                        <p class="username">Akrck02 lol</p>
+                        <p class="date">4 min ago</p>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined">more_vert</span>
+            </div>
+            <p class="message-to">To Juan Diaz</p>
+            <div class="content">
+                LaoQuian! It's been to long! How are you? <br><br>
+                I've been thinking about home and wiw so much lately. <br><br>
+                Are you free next weekend? Diaz and odasuda want to catch up with you!
+            </div>
+            <div class="button-bar">
+                <div class="box-row box-x-center">
+                    <button>Discard</button>
+                    <button class="primary">Reply</button>
                 </div>
             </div>
-            <span class="material-symbols-outlined">more_vert</span>
         </div>
-        <p class="message-to">To Juan Diaz</p>
-        <div class="content">
-            LaoQuian! It's been to long! How are you? <br><br>
-            I've been thinking about home and wiw so much lately. <br><br>
-            Are you free next weekend? Diaz and odasuda want to catch up with you!
-        </div>
-        <div class="button-bar">
-            <div class="box-row box-x-center">
-                <button>Discard</button>
-                <button class="primary">Reply</button>
+        <div class="card surface-1 box-column">
+            <div class="box-row box-y-center   box-x-between">
+                <div class="user box-row box-y-center">
+                    <img class="user-profile-pic" src="./resources/photo.jpg" alt="akrck02" >
+                    <div class="msg-info box-column">
+                        <p class="username">Akrck02</p>
+                        <p class="date">4 min ago</p>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined">more_vert</span>
             </div>
-        </div>
-    </div>
-    <div class="card primary-container box-column">
-        <div class="box-row box-y-center   box-x-between">
-            <div class="user box-row box-y-center">
-                <img class="user-profile-pic" src="./resources/photo.jpg" alt="akrck02" >
-                <div class="msg-info box-column">
-                    <p class="username">Akrck02</p>
-                    <p class="date">4 min ago</p>
+            <p class="message-to">To Juan Diaz</p>
+            <div class="content">
+                LaoQuian! It's been to long! How are you? <br><br>
+                I've been thinking about home and wiw so much lately. <br><br>
+                Are you free next weekend? Diaz and odasuda want to catch up with you!
+            </div>
+            <div class="button-bar">
+                <div class="box-row box-x-center">
+                    <button>Discard</button>
+                    <button class="primary">Reply</button>
                 </div>
             </div>
-            <span class="material-symbols-outlined">more_vert</span>
         </div>
-        <p class="message-to">To Juan Diaz</p>
-        <div class="content">
-            LaoQuian! It's been to long! How are you? <br><br>
-            I've been thinking about home and wiw so much lately. <br><br>
-            Are you free next weekend? Diaz and odasuda want to catch up with you!
-        </div>
-        <div class="button-bar">
-            <div class="box-row box-x-center">
-                <button>Discard</button>
-                <button class="primary">Reply</button>
+        <div class="card surface-1 box-column">
+            <div class="box-row box-y-center   box-x-between">
+                <div class="user box-row box-y-center">
+                    <img class="user-profile-pic" src="./resources/photo.jpg" alt="akrck02" >
+                    <div class="msg-info box-column">
+                        <p class="username">Akrck02</p>
+                        <p class="date">4 min ago</p>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined">more_vert</span>
             </div>
-        </div>
-    </div>
-    <div class="card primary-container box-column">
-        <div class="box-row box-y-center   box-x-between">
-            <div class="user box-row box-y-center">
-                <img class="user-profile-pic" src="./resources/photo.jpg" alt="akrck02" >
-                <div class="msg-info box-column">
-                    <p class="username">Akrck02</p>
-                    <p class="date">4 min ago</p>
+            <p class="message-to">To Juan Diaz</p>
+            <div class="content">
+                LaoQuian! It's been to long! How are you? <br><br>
+                I've been thinking about home and wiw so much lately. <br><br>
+                Are you free next weekend? Diaz and odasuda want to catch up with you!
+            </div>
+            <div class="button-bar">
+                <div class="box-row box-x-center">
+                    <button>Discard</button>
+                    <button class="primary">Reply</button>
                 </div>
             </div>
-            <span class="material-symbols-outlined">more_vert</span>
         </div>
-        <p class="message-to">To Juan Diaz</p>
-        <div class="content">
-            LaoQuian! It's been to long! How are you? <br><br>
-            I've been thinking about home and wiw so much lately. <br><br>
-            Are you free next weekend? Diaz and odasuda want to catch up with you!
-        </div>
-        <div class="button-bar">
-            <div class="box-row box-x-center">
-                <button>Discard</button>
-                <button class="primary">Reply</button>
+        <div class="card surface-1 box-column">
+            <div class="box-row box-y-center box-x-between">
+                <div class="user box-row box-y-center">
+                    <img class="user-profile-pic" src="./resources/photo.jpg" alt="akrck02" >
+                    <div class="msg-info box-column">
+                        <p class="username">Akrck02</p>
+                        <p class="date">4 min ago</p>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined">more_vert</span>
             </div>
-        </div>
-    </div>
-    <div class="card primary-container box-column">
-        <div class="box-row box-y-center   box-x-between">
-            <div class="user box-row box-y-center">
-                <img class="user-profile-pic" src="./resources/photo.jpg" alt="akrck02" >
-                <div class="msg-info box-column">
-                    <p class="username">Akrck02</p>
-                    <p class="date">4 min ago</p>
+            <p class="message-to">To Juan Diaz</p>
+            <div class="content">
+                LaoQuian! It's been to long! How are you? <br><br>
+                I've been thinking about home and wiw so much lately. <br><br>
+                Are you free next weekend? Diaz and odasuda want to catch up with you!
+            </div>
+            <div class="button-bar">
+                <div class="box-row box-x-center">
+                    <button>Discard</button>
+                    <button class="primary">Reply</button>
                 </div>
             </div>
-            <span class="material-symbols-outlined">more_vert</span>
         </div>
-        <p class="message-to">To Juan Diaz</p>
-        <div class="content">
-            LaoQuian! It's been to long! How are you? <br><br>
-            I've been thinking about home and wiw so much lately. <br><br>
-            Are you free next weekend? Diaz and odasuda want to catch up with you!
-        </div>
-        <div class="button-bar">
-            <div class="box-row box-x-center">
-                <button>Discard</button>
-                <button class="primary">Reply</button>
+    
+        <button class="new-mail primary">
+            <span class="material-symbols-outlined">edit</span>
+        </button>
+    
+        <div class="nav-bar box-row box-center surface-2">
+            <div class="box-column button-group">
+                <button id="inbox">
+                    <span class="material-symbols-outlined">all_inbox</span>
+                </button>
+                <label for="inbox">inbox</label>
             </div>
-        </div>
+            <div class="box-column button-group">
+                <button id="inbox">
+                    <span class="material-symbols-outlined">group</span>
+                </button>
+                <label for="group">groups</label>
+            </div>
+            <div class="separator"></div>
+    
+            <div class="box-column button-group">
+                <button id="inbox">
+                    <span class="material-symbols-outlined">chat</span>
+                </button>
+                <label for="chat">chat</label>
+            </div>
+            <div class="box-column button-group">
+                <button id="account_circle">
+                    <span class="material-symbols-outlined">account_circle</span>
+                </button>
+                <label for="acco surface-1unt_circle">inbox</label>
+            </div>
+        </div>    
     </div>
-
-    <button class="new-mail primary">
-        <span class="material-symbols-outlined">edit</span>
-    </button>
-
-    <div class="nav-bar box-row box-center secondary-container">
-        <div class="box-column button-group">
-            <button id="inbox">
-                <span class="material-symbols-outlined">all_inbox</span>
-            </button>
-            <label for="inbox">inbox</label>
-        </div>
-        <div class="box-column button-group">
-            <button id="inbox">
-                <span class="material-symbols-outlined">group</span>
-            </button>
-            <label for="group">groups</label>
-        </div>
-        <div class="separator"></div>
-
-        <div class="box-column button-group">
-            <button id="inbox">
-                <span class="material-symbols-outlined">chat</span>
-            </button>
-            <label for="chat">chat</label>
-        </div>
-        <div class="box-column button-group">
-            <button id="account_circle">
-                <span class="material-symbols-outlined">account_circle</span>
-            </button>
-            <label for="account_circle">inbox</label>
-        </div>
-    </div>
-
 </body>
-
 </html>
