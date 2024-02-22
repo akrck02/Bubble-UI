@@ -1,4 +1,4 @@
-:root[data-bubble=material] button {
+button {
     padding: .65rem 1rem;
     margin: 0.5rem .5rem; 
     border-radius: 6rem;
@@ -8,22 +8,25 @@
     height: 3rem;
     min-width: fit-content;
 
-    background: var(--item-background-color);
-    color: var(--on-item-background-color);
+    background: var(--surface-2);
+    color: var(--on-surface-2);
     transition: transform var(--animation-fast) ease-in-out, filter var(--animation-fast) ease-in-out;
 }
 
-:root[data-bubble=material] button:hover, 
-:root[data-bubble=material] button:focus {
+button:hover, button:focus {
    filter: brightness(.9);
 }
 
-:root[data-bubble=material][data-theme=dark] button:hover,
-:root[data-bubble=material][data-theme=dark] button:focus {
+:root[data-theme=dark] button:hover,
+:root[data-theme=dark] button:focus {
     filter: brightness(1.2);
 }
 
-[data-bubble=material] button:active {
+button:active {
     transform: scale(.92);
 }
 
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}

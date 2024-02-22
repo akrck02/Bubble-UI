@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" data-bubble="material">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,6 @@
 <style>
     body {
         padding: 5rem;
-        background: var(--background-color);
         transition: background-color var(--animation-fast);
 
         margin-bottom: 5rem;
@@ -22,9 +21,9 @@
     }
 
     .surface,
-    .primary-container,
-    .secondary-container,
-    .tertiary-container,
+    .surface-1,
+    .surface-2,
+    .surface-3,
     .error-container {
         padding: 1rem;
     }
@@ -37,12 +36,12 @@
         width: 100%;
     }
 
-    .primary-container{
+    .surface-1 {
         margin-bottom: 2rem;
         margin-top: 1rem;
     }
 
-    .secondary-container {
+    .surface-2 {
         margin-top: 2rem;
     }
 </style>
@@ -54,16 +53,18 @@
                 let theme = document.documentElement.getAttribute('data-theme');
                 console.log(theme);
                 if (theme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark-you');
+                } 
+                else if (theme === 'dark-you'){
                     document.documentElement.setAttribute('data-theme', 'light');
-                }
-
+                }                
+                else if (theme === 'light') {
+                    document.documentElement.setAttribute('data-theme', 'light-you');
+                } 
                 else if (theme === 'light-you') {
                     document.documentElement.setAttribute('data-theme', 'dark');
                 }
 
-                else if (theme === 'light') {
-                    document.documentElement.setAttribute('data-theme', 'light-you');
-                }
             });
         });
     });
@@ -72,7 +73,7 @@
 <body class="box-column">
 
     <h1>Buttons</h1>
-    <div class="box-row box-wrap primary-container">
+    <div class="box-row box-wrap surface-1">
         <button class="primary">Extralarge primary</button>
         <button class="secondary">Secondary</button>
         <button class="tertiary">Tertiary</button>
@@ -83,7 +84,7 @@
 
     <h1>Inputs</h1>
     <div class="box-row">
-        <div class="box-column box-wrap primary-container" style="min-width:70%">
+        <div class="box-column box-wrap surface-1" style="min-width:70%">
             <div class="box-row box-wrap">
                 <input type="text" placeholder="Normal">
                 <input type="number" placeholder="Normal">
@@ -95,11 +96,11 @@
 
         </div>
 
-        <div class="primary-container" style="margin-left:1rem;">
+        <div class="surface-1" style="margin-left:1rem;">
             <p>Sample text here</p>
-            <div class="box-column secondary-container">
+            <div class="box-column Surface-2">
                 <h3 style="margin-top:0; margin-left:0;"> Random text here: </h3>
-                <div class="tertiary-container">
+                <div class="surface-3">
 
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic aliquam atque impedit beatae
                         reiciendis! Cumque eligendi possimus aperiam eaque consectetur expedita impedit nostrum labore
@@ -111,7 +112,7 @@
     </div>
 
     <h1>Surfaces</h1>
-    <div class="box-column primary-container">
+    <div class="box-column surface-1">
         <div class="surface">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, nobis? Dignissimos, neque nihil ipsam quam laboriosam alias at voluptates ducimus obcaecati, consequuntur cupiditate, minima possimus dolorum qui aut numquam officia.</p>
         </div>
