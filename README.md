@@ -19,7 +19,7 @@
 > We know layouts in CSS framework are insanely opinionated,<br>
 > so we give you freedom to choose layouts with box based system. 
 
-## Modular framework, how does this works?
+## Modular framework, how does this work?
 > Bubble was build to be scalable and our first choise <br>
 > was to make it modular to easy develop new components  <br>
 > and ony import that ones u need. <br>

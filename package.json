@@ -1,7 +1,7 @@
 {
   "name": "bubble_ui",
   "version": "2.0.1",
-  "description": "<img src='./Bubble_banner.png' style='width:80%;max-width:400px;'/>",
+  "description": "The modern UI engine",
   "main": "index.js",
   "directories": {
     "test": "test"

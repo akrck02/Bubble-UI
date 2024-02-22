@@ -17,32 +17,11 @@ body {
     padding: 0;
 
     background: var(--background);
-    color: var(--text-color);
+    color: var(--on-background);
     font-family: var(--font);
 }
 
-input[type="checkbox"] {
-    margin: 10px;
-}
 
 label {
     cursor: pointer;
-}
-
-button:focus,
-input:focus {
-    outline: none;
-}
-
-h1 {
-    font-family: var(--font-title);
-    font-size: 1.5em;
-}
-
-a {
-    --color: var(--accent-color);
-    --text-decoration: none;
-
-    color: var(--color);
-    text-decoration: var(--text-decoration);
 }

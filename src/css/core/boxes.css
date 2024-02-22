@@ -44,7 +44,7 @@
     align-items: flex-end;
 }   
 
-.box-warp{
+.box-wrap{
     display: flex;
     flex-wrap: wrap;
 }
